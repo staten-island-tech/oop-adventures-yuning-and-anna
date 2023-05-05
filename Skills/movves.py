@@ -1,4 +1,5 @@
-from classes_for_class import *
+from Skills.classes_for_class import *
+from weapons.classes_for_weapons import *
 
 Punch = Moves(50,1)
 Slash = Moves(damage,1)
