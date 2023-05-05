@@ -1,4 +1,4 @@
-from classes_for_Moves import *
+from classes_for_class import *
 
 Punch = Moves(50,1)
 Slash = Moves(damage,1)
