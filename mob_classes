@@ -1,0 +1,3 @@
+class Mobs():
+    def __init__(self, damage, health, defense):
+        
