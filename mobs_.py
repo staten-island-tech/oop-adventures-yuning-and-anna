@@ -1,0 +1,1 @@
+skeleton = Mobs(30, 40, 20)
