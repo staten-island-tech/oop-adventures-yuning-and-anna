@@ -8,5 +8,7 @@ room_6 = "This is the sixth room and there are two big slime and 2 slimes in thi
 room_7 = "This is the seventh room and there are three big slimes in this room. After beating the room, there are two ways you can go; either to the room before or the room south of this one."
 room_8 = "This is the eigth room and there is one armored skeleton and one armored orc. After beating the room, there are two ways you can go; either to the room before or the room west of this one."
 room_9 = "This is the ninth room and there are two armored skeletons and two armored orcs. This is the miniboss and the room right before the boss of this dungeon. After beating the room, there are two ways you can go; either to the room before or the room east of this one."
-room_10 = "This is the hardest room there will be to the game, if you made it this far then,  cool, after you beat this room, you probably will get out of this cave. There might be like 4 big 
-mro80 big slimes. They have like 1000 health."
+room_10 = "This is the hardest room there will be to the game, if you made it this far then,  cool, after you beat this room, you probably will get out of this cave. There might be like 4 big big slimes. They have like 1000 health."
+
+room_fall = "Uh Oh. This room was a trap for you and going into this room brings you right back to the start. This was not my idea and instead the idea of my partner. SO now you suffer because of him. RIP"
+room_gambling =  "So this room gives you one free item the second you walk unto it."
