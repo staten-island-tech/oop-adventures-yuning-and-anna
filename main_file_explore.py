@@ -4,7 +4,11 @@ from roms import *
 
 from chARActer import *
 
-def 
+from mobsC import *
+def Mattack(skeleton, slime, spider, orc, BiG_sLIME):
+    damage = skeleton, slime, spider, orc, BiG_sLIME["attack"]
+    ara_ara['defend'] = max(0, ara_ara['health'] - damage)
+
 
 def attacking(ara_ara, monster, move):
     damage = ara_ara["move"][move]
@@ -21,7 +25,8 @@ def starting():
  
 def room_1():
     print(room_1)
-    Mobs_in = Room_1
+    Mobs_in = Room_1 
+    Mobs_in = attacking
 
 
     
