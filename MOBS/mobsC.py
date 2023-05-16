@@ -1,8 +1,8 @@
 class Mobs():
-    def __init__(self, strength, health, defense):
-        self.strength = strength
+    def __init__(self, stremgth, health, defense):
+        self.stremgth = stremgth
         self.health = health
         self.defense = defense 
 class Mob_Moves():
-    def __init__(self, damage):
-        self.damage = damage 
+    def __init__(self, stremgth):
+        self.stremgth = stremgth 
