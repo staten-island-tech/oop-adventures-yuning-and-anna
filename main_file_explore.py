@@ -1,8 +1,8 @@
-from introduction_to_room import *
+from Roms.introduction_to_room import *
 
-from roms import * 
+from Roms.roms import * 
 
-from chARActer import *
+from chARActer.chARActer import *
 
 from mobsC import *
 
