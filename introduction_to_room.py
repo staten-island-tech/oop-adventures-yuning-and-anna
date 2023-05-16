@@ -11,4 +11,4 @@ room_9 = "This is the ninth room and there are two armored skeletons and two arm
 room_10 = "This is the hardest room there will be to the game, if you made it this far then,  cool, after you beat this room, you probably will get out of this cave. There might be like 4 big big slimes. They have like 1000 health."
 
 room_fall = "Uh Oh. This room was a trap for you and going into this room brings you right back to the start. This was not my idea and instead the idea of my partner. SO now you suffer because of him. RIP"
-room_gambling =  "So this room gives you one free item the second you walk unto it."
+room_gambling =  "So this room gives you one free item the second you walk into it. However, you can also choose to sacrifice 25 percent of your health yo have a chance at getting another item or a punishment. It's your choice :)"
