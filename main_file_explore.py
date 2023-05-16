@@ -2,14 +2,16 @@ from Roms.introduction_to_room import *
 
 from Roms.roms import * 
 
-from chARActer.chARActer import *
+from ChARActer.chARActer import *
 
-from mobsC import *
+from MOBS.mobsC import *
 
-def Mattack(skeleton, slime, spider, orc, BiG_sLIME):
-    damage = skeleton, slime, spider, orc, BiG_sLIME["attack"]
-    ara_ara['defend'] = max(0, ara_ara['health'] - damage)
+from MOBS.mobs_ import *
 
+def Mattack():
+    HIT = MOB.strength - ara_ara.defense
+    ara_ara.health = ara_ara.health - HIT
+     
 
 def attacking(ara_ara, monster, move):
     damage = ara_ara["move"][move]
