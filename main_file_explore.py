@@ -8,16 +8,20 @@ from MOBS.mobsC import *
 
 from MOBS.mobs_ import *
 
+from Skills.movves import *
+
+from Skills.movves import *
+
 def Mattack():
     HIT = MOB.strength - ara_ara.defense
     ara_ara.health = ara_ara.health - HIT
-    print()
+    print(MOB "has dealt" HIT "damage to" ara_ara)
     return ara_ara.health
     )
-def attacking(ara_ara, monster, move):
-    damage = ara_ara["move"][move]
-    monster["defender"] = max(0, monster["health"] - damage)
-    print(f"{ara_ara['name']} used {move} and dealt {damage} damage to {monster['name']}")
+def arack():
+    MOB.health = MOB.health - Skills.arage + MOB.thick_skin
+
+
 
 def starting():
     beginning = input("Type start_adventure when are ready to begin ")
