@@ -11,8 +11,9 @@ from MOBS.mobs_ import *
 def Mattack():
     HIT = MOB.strength - ara_ara.defense
     ara_ara.health = ara_ara.health - HIT
-     
-
+    print()
+    return ara_ara.health
+    )
 def attacking(ara_ara, monster, move):
     damage = ara_ara["move"][move]
     monster["defender"] = max(0, monster["health"] - damage)
