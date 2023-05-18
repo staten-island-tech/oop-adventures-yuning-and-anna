@@ -6,8 +6,6 @@ from ChARActer.chARActer import *
 
 from MOBS.mobsC import *
 
-from MOBS.mobs_ import *
-
 from Skills.movves import *
 
 from Skills.movves import *
@@ -23,8 +21,6 @@ def arack():
     MOB.health = MOB.health -  + MOB.thick_skin
     print(ara_ara "has dealt" ARAIT "damage to" MOB)
 
-
-
 def starting():
     beginning = input("Type start_adventure when are ready to begin ")
     if beginning == "start_adventure":
@@ -35,7 +31,7 @@ def starting():
  
 def room_1():
     print(room_1)
-    Mobs_in = Room_1 
+    Mobs_in = room_1 
     Mobs_in = attacking
 
 

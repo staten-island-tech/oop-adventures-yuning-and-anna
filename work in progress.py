@@ -14,6 +14,8 @@ def starting():
         print("Try again when you are ready")
         beginning = input("Type start_adventure when are ready to begin ")
 
-ara_ara = input("WHaT do you wAnt to nAme your chARActer?") 
+
+
+ara_ara = input("WhaT do you want to name your character?") 
 
 
