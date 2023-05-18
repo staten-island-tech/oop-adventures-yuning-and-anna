@@ -19,7 +19,9 @@ def Mattack():
     return ara_ara.health
     )
 def arack():
-    MOB.health = MOB.health - Skills.arage + MOB.thick_skin
+    ARAIT = Skills.arage
+    MOB.health = MOB.health -  + MOB.thick_skin
+    print(ara_ara "has dealt" ARAIT "damage to" MOB)
 
 
 
