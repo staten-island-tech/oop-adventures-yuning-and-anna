@@ -6,8 +6,6 @@ from ChARActer.chARActer import *
 
 from MOBS.mobsC import *
 
-from MOBS.mobs_ import *
-
 from Skills.movves import *
 
 from Skills.movves import *
@@ -24,6 +22,7 @@ def arack():
     print(ara_ara, "has dealt", ARAIT, "damage to", MOB)
 
 
+
 def starting():
     beginning = input("Type start_adventure when are ready to begin ")
     if beginning == "start_adventure":
@@ -31,6 +30,7 @@ def starting():
     else:
         print("Try again when you are ready")
         beginning = input("Type start_adventure when are ready to begin ")
+ 
 
 
     
