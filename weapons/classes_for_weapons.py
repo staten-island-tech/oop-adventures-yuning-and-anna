@@ -1,6 +1,6 @@
 class Weapon():
     def __init__(self, damage):
-        self.damage = dmage
+        self.damage = damage
 class Armor():
     def __init__(self, defense):
         self.defense = defense

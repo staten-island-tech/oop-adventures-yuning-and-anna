@@ -1,4 +1,4 @@
-ara_ara = input("WHat do you want to name your character?")
+
 
 class MC():
     def __init__(self, health, defense):

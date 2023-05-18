@@ -1,4 +1,4 @@
-from mobsC import *
+from MOBS.mobsC import *
 
 skeleton = Mobs(20, 300, 10)
 
