@@ -10,8 +10,14 @@ if freebies == 1:
         freebies = random.randint(0, 6)
     else:
         weapon_damage = 85
-        print(weapon_damage)
         Item.append("katana")
-        print(Item)
+        print("Congrats! You have gotten a Katana! Your damage for moves like Slash is now 85!")
+if freebies == 2:
+    if "katana" in Item:
+        freebies = random.randint(0, 6)
+    else:
+        weapon_damage = 85
+        Item.append("katana")
+        print("Congrats! You have gotten a Katana! Your damage for moves like Slash is now 85!")
         
 
