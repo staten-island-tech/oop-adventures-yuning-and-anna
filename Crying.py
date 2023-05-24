@@ -29,3 +29,22 @@ def move_rooms(direction, room='room_1'):
         if room == 'room_1':
             return 'Invalid direction please try again.'
         return rooms[room]['West']
+
+def move_room_1():
+    userDirection = ''
+    while userDirection != 'exit':
+        userDirection = input("Pick a direction, or MUST type exit to exit the game.")
+        if currentRoom == 'room_1':
+            if userDirection == 'south':
+                currentRoom = move_rooms(userDirection, currentRoom)
+                show_instructions()
+                print(currentRoom)
+            elif userDirection == 'east':
+                currentRoom = move_rooms(userDirection, currentRoom)
+                show_instructions()
+                print(currentRoom)
+        else:
+            print('Invalid direction. Please pick another direction.')
+            print(currentRoom)
+            show_instructions()
+
