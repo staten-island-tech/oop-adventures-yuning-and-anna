@@ -6,6 +6,8 @@ from ChARActer.chARActer import *
 
 from MOBS.mobsC import *
 
+from MOBS.mobs_ import *
+
 def starting():
     beginning = input("Type start_adventure when are ready to begin ")
     if beginning == "start_adventure":
@@ -23,4 +25,6 @@ starting()
 
 print(room_1)
 
-c
+MOB = slime
+MOB2 = slime
+MOB3 = slime
