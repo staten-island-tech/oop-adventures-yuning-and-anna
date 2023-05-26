@@ -8,7 +8,8 @@ rooms = {
     'room_7':{'south': 'CRY_PEASANTS', 'west': 'room_5'},
     'room_8':{'east': 'room_9', 'west': 'gambling_2'},
     'room_9':{'east': 'room_10', 'north' : 'room_6', 'west' : 'room_8'},
-    'room_10':{'west': 'room_9'}
+    'room_10':{'west': 'room_9'},
+    'CRY_PEASANTS':{'north': 'room_1', 'south': 'room_1', 'east': 'room_1', 'west': 'room_1'}
 }
 
 def show_instructions():
@@ -198,3 +199,204 @@ def move_rooms_6(direction, room='room_6'):
         room == 'CRY_PEASANTS'
         return rooms[room]['west']
     
+def user_move_room_6():
+    userDirection = ''
+    while userDirection != 'exit':
+        userDirection = input("Pick a direction, or MUST type exit to exit the game.")
+        if currentRoom == 'room_6':
+            if userDirection == 'west':
+                currentRoom = move_rooms_6(userDirection, currentRoom)
+                show_instructions()
+                print(currentRoom)
+            elif userDirection == 'east':
+                currentRoom = move_rooms_6(userDirection, currentRoom)
+                show_instructions()
+                print(currentRoom)
+            elif userDirection == 'north':
+                currentRoom = move_rooms_6(userDirection, currentRoom)
+                show_instructions()
+                print(currentRoom)
+            elif userDirection == 'south':
+                currentRoom = move_rooms_6(userDirection, currentRoom)
+                show_instructions()
+                print(currentRoom)
+        else:
+            print('That is not a direction, pick another direction.')
+            print(currentRoom)
+            show_instructions()
+
+def move_rooms_7(direction, room='room_7'):
+    if direction == 'south':
+        room == 'CRY_PEASANTS'
+        return rooms[room]['south']
+    elif direction == 'north':
+        if room == 'room_7':
+            return 'Invalid direction please try again.'
+        return rooms[room]['north']
+    elif direction == 'east':
+        if room == 'room_7':
+            return 'Invalid direction please try again.'
+        return rooms[room]['east']
+    elif direction == 'west':
+        room == 'room_5'
+        return rooms[room]['west']
+    
+def user_move_room_7():
+    userDirection = ''
+    while userDirection != 'exit':
+        userDirection = input("Pick a direction, or MUST type exit to exit the game.")
+        if currentRoom == 'room_7':
+            if userDirection == 'west':
+                currentRoom = move_rooms_7(userDirection, currentRoom)
+                show_instructions()
+                print(currentRoom)
+            elif userDirection == 'south':
+                currentRoom = move_rooms_7(userDirection, currentRoom)
+                show_instructions()
+                print(currentRoom)
+        else:
+            print('That is not a direction, pick another direction.')
+            print(currentRoom)
+            show_instructions()
+
+def move_rooms_8(direction, room='room_8'):
+    if direction == 'south':
+        if room == 'room_8':
+            return 'Invalid direction please try again.'
+        return rooms[room]['south']
+    elif direction == 'north':
+        if room == 'room_8':
+            return 'Invalid direction please try again.'
+        return rooms[room]['north']
+    elif direction == 'east':
+        room == 'room_9'
+        return rooms[room]['east']
+    elif direction == 'west':
+        room == 'gambling_2'
+        return rooms[room]['west']
+    
+def user_move_room_8():
+    userDirection = ''
+    while userDirection != 'exit':
+        userDirection = input("Pick a direction, or MUST type exit to exit the game.")
+        if currentRoom == 'room_8':
+            if userDirection == 'west':
+                currentRoom = move_rooms_8(userDirection, currentRoom)
+                show_instructions()
+                print(currentRoom)
+            elif userDirection == 'east':
+                currentRoom = move_rooms_8(userDirection, currentRoom)
+                show_instructions()
+                print(currentRoom)
+        else:
+            print('That is not a direction, pick another direction.')
+            print(currentRoom)
+            show_instructions()
+
+def move_rooms_9(direction, room='room_9'):
+    if direction == 'south':
+        if room == 'room_9':
+            return 'Invalid direction please try again.'
+        return rooms[room]['south']
+    elif direction == 'north':
+        room == 'room_6'
+        return rooms[room]['north']
+    elif direction == 'east':
+        room == 'room_10'
+        return rooms[room]['east']
+    elif direction == 'west':
+        room == 'room_8'
+        return rooms[room]['west']
+    
+def user_move_room_9():
+    userDirection = ''
+    while userDirection != 'exit':
+        userDirection = input("Pick a direction, or MUST type exit to exit the game.")
+        if currentRoom == 'room_9':
+            if userDirection == 'west':
+                currentRoom = move_rooms_9(userDirection, currentRoom)
+                show_instructions()
+                print(currentRoom)
+            elif userDirection == 'east':
+                currentRoom = move_rooms_9(userDirection, currentRoom)
+                show_instructions()
+                print(currentRoom)
+            elif userDirection == 'north':
+                currentRoom = move_rooms_9(userDirection, currentRoom)
+                show_instructions()
+                print(currentRoom)
+        else:
+            print('That is not a direction, pick another direction.')
+            print(currentRoom)
+            show_instructions()
+
+def move_rooms_10(direction, room='room_10'):
+    if direction == 'south':
+        if room == 'room_10':
+            return 'Invalid direction please try again.'
+        return rooms[room]['south']
+    elif direction == 'north':
+        if room == 'room_10':
+            return 'Invalid direction please try again.'
+        return rooms[room]['north']
+    elif direction == 'east':
+        if room == 'room_10':
+            return 'Invalid direction please try again.'
+        return rooms[room]['east']
+    elif direction == 'west':
+        room == 'room_9'
+        return rooms[room]['west']
+    
+def user_move_room_10():
+    userDirection = ''
+    while userDirection != 'exit':
+        userDirection = input("Pick a direction, or MUST type exit to exit the game.")
+        if currentRoom == 'room_10':
+            if userDirection == 'west':
+                currentRoom = move_rooms_10(userDirection, currentRoom)
+                show_instructions()
+                print(currentRoom)
+        else:
+            print('That is not a direction, pick another direction.')
+            print(currentRoom)
+            show_instructions()
+
+def CRY_PEASANTS_1(direction, room='CRY_PEASANTS'):
+    if direction == 'south':
+        room == 'room_1'
+        return rooms[room]['south']
+    elif direction == 'north':
+        room == 'room_1'
+        return rooms[room]['north']
+    elif direction == 'east':
+        room == 'room_1'
+        return rooms[room]['east']
+    elif direction == 'west':
+        room == 'room_1'
+        return rooms[room]['west']
+    
+def CRY_PEASANTS_1():
+    userDirection = ''
+    while userDirection != 'exit':
+        userDirection = input("Pick a direction, or MUST type exit to exit the game.")
+        if currentRoom == 'CRY_PEASANTS':
+            if userDirection == 'west':
+                currentRoom = CRY_PEASANTS_1(userDirection, currentRoom)
+                show_instructions()
+                print(currentRoom)
+            elif userDirection == 'east':
+                currentRoom = CRY_PEASANTS_1(userDirection, currentRoom)
+                show_instructions()
+                print(currentRoom)
+            elif userDirection == 'north':
+                currentRoom = CRY_PEASANTS_1(userDirection, currentRoom)
+                show_instructions()
+                print(currentRoom)
+            elif userDirection == 'south':
+                currentRoom = CRY_PEASANTS_1(userDirection, currentRoom)
+                show_instructions()
+                print(currentRoom)
+        else:
+            print('That is not a direction, pick another direction.')
+            print(currentRoom)
+            show_instructions()
