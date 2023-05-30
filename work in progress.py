@@ -8,6 +8,8 @@ from MOBS.mobsC import *
 
 from MOBS.mobs_ import *
 
+
+
 def starting():
     beginning = input("Type start_adventure when are ready to begin ")
     if beginning == "start_adventure":
@@ -22,7 +24,8 @@ print("This is the best RPG game you will play in this period. So the story is p
 ara_ara = input("What do you want to name your character?") 
 
 starting()
-
+if currentRoom = room_1:
+    if 
 print(room_1)
 
 MOB = slime
