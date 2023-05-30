@@ -54,5 +54,3 @@ def everything_rooms_1():
             print('That is not a direction, pick another direction.')
             print(currentRoom)
             show_instructions()
-
-everything_rooms_1()
