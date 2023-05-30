@@ -1,7 +1,7 @@
 intro_room_beginning = "To level up from adventure rank F, you go into a dungeon. But uh oh rocks slide down, covering the dungeon entrace and blocking the way out of the cave. But since this is a fantasy world, you can get out of dungeons by going to the last room in the dungeon. However, there are a bunch of mobs blocking your way. Additionally, you got lucky and the amount of mobs in this cave is perfectly the amount of mobs you need to level up from adventure rank F to adventure rank D. So, you set off into the dungeon and pray not to get hurt in the dungeon."
 room_1 = "This is the first room and there are 3 slimes in this room. They are blocking a chest. Defeat all the mobs and you can open the chest. After beating the mobs in this room, there are two ways you can go: east or south."
 room_2 = "This is the second room and there are 3 skeletons in this room. After beating the room, there are two ways you can go; either back up to the room before or the room south of this one."
-room_3 = "This is the third room and there are 3 spiders in this room. After beating the room, there are two ways you can go; either to the room before or the room north of this one."
+room_3 = "This is the third room and there are 3 spiders in this room. After beating the room, there are three ways you can go; either to the room before or the room east of this one or the room north of this one."
 room_4 = "This is the fourth room and there are 3 boars in this room. After beating the room, there are two ways you can go; either to the room before or the room west of this one."
 room_5 = "This is the fifth room and there is one big slime and 2 slimes in this room. After beating the room, there are two ways you can go; either to the room before or the room east of this one."
 room_6 = "This is the sixth room and there are two big slime and 2 slimes in this room. After beating the room, there are four ways you can go; the room before, to the west, to the east and to the south."
@@ -12,3 +12,14 @@ room_10 = "This is the hardest room there will be to the game, if you made it th
 
 room_fall = "Uh Oh. This room was a trap for you and going into this room brings you right back to the start. This was not my idea and instead the idea of my partner. SO now you suffer because of him. RIP"
 room_gambling =  "So this room gives you one free item the second you walk into it. However, you can also choose to sacrifice 25 percent of your health yo have a chance at getting another item or a punishment. It's your choice :)"
+
+afterroom_1 = "There are two ways you can go: east or south."
+afterroom_2 = "There are two ways you can go: north or south."
+afterroom_3 = "There are three ways you can go: west or north or east."
+afterroom_4 = "There are two ways you can go: south or west"
+afterroom_5 = "There are two ways you can go: west or east."
+afterroom_6 = "There are four ways you can go: north or south or west or east"
+afterroom_7 = "There are two ways you can go: west or south"
+afterroom_8 = "There are two ways you can go: south or east"
+afterroom_9 = "There are two ways you can go: "
+afterroom_10 = "There are two ways you can go:"
