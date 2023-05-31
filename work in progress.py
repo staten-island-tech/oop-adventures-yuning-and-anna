@@ -6,6 +6,8 @@ from ChARActer.chARActer import *
 
 from MOBS.mobsC import *
 
+from MOBS.mobs_ import *
+
 from Crying import *
 alreadyfoughten = ["room1"]
 
@@ -27,7 +29,10 @@ starting()
 CurrentRoom = room_1
 
 if CurrentRoom == room_1:
-    if "room1" in alreadyfoughten:
+    if "room1" in alreadyfoughten:    
         user_move_room_1()
     else: 
-        print("hi")
+        MOB1 = slime
+        MOB2 = slime 
+        MOB3 = slime
+        
