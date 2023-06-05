@@ -9,6 +9,51 @@ from MOBS.mobsC import *
 from MOBS.mobs_ import *
 
 from Crying import *
+
+
+def Mattack():
+    HIT = MOB1.strength - ara_ara.defense
+    ara_ara.health = ara_ara.health - HIT
+    print(MOB1, "has dealt", HIT, "damage to", ara_ara)
+    return ara_ara.health
+
+def Mattack2():
+    HIT = MOB2.strength - ara_ara.defense
+    ara_ara.health = ara_ara.health - HIT
+    print(MOB2, "has dealt", HIT, "damage to", ara_ara)
+    return ara_ara.health
+
+def Mattack3():
+    HIT = MOB3.strength - ara_ara.defense
+    ara_ara.health = ara_ara.health - HIT
+    print(MOB3, "has dealt", HIT, "damage to", ara_ara)
+    return ara_ara.health
+
+def arack():
+    ARAIT = Skills.arage
+    MOB.health = MOB.health -  + MOB.thick_skin
+    print(ara_ara, "has dealt", ARAIT, "damage to", MOB)
+
+def arack2():
+    ARAIT = Skills.arage
+    MOB2.health = MOB2.health -  + MOB2.thick_skin
+    print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+
+def arack():
+    ARAIT = Skills.arage
+    MOB3.health = MOB3.health -  + MOB3.thick_skin
+    print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+
+
+
+def starting():
+    beginning = input("Type start_adventure when are ready to begin ")
+    if beginning == "start_adventure":
+        print(intro_room_beginning)
+    else:
+        print("Try again when you are ready")
+        beginning = input("Type start_adventure when are ready to begin ")
+ 
 alreadyfoughten = []
 
 def starting():
@@ -26,13 +71,28 @@ ara_ara = input("What do you want to name your character?")
 
 starting()
 
-print("In this game, there are 5 different movews that you can use"
+print("In this game, there are 5 different moves that you can use"
 "They are punch, slash, explosive shot, armor pierce, and sword storm."
-"Punch does 40 damage if the enemy has no defense and you don't need any weapons")
+"Punch does 40 damage if the enemy has no defense and you don't need any weapons"
+"Slash does the damage that your weapon has."
+"Explosion Sot does the damage of your bow, but it takes 2 turns to use."
+"Sword Storm does half the damage of your weapon, but it an an AOE attack, which will attack every enemy.")
 
-CurrentRoom = room_1
+def moves():
+    print("In this game, there are 5 different movews that you can use"
+"They are punch, slash, explosive shot, armor pierce, and sword storm."
+"Punch does 40 damage if the enemy has no defense and you don't need any weapons"
+"Slash does the damage that your weapon has."
+"Explosion Sot does the damage of your bow, but it takes 2 turns to use."
+"Sword Storm does half the damage of your weapon, but it an an AOE attack, which will attack every enemy.")
+    MCchoice = input("What move do you want to use? Only type the first letter of the move.")
+    if MCchoice == p:
 
-if CurrentRoom == room_1:
+    
+
+currentRoom = room_1
+
+if currentRoom == room_1:
     if "room1" in alreadyfoughten:    
         user_move_room_1()
     else: 
@@ -40,6 +100,7 @@ if CurrentRoom == room_1:
         MOB2 = slime 
         MOB3 = slime
         print(room_1beg)
+        
 
 
         user_move_room_1()
