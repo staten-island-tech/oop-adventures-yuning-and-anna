@@ -11,6 +11,10 @@ from MOBS.mobs_ import *
 from Crying import *
 alreadyfoughten = []
 
+from MOBS.mobs_ import *
+
+
+
 def starting():
     beginning = input("Type start when are ready to begin ")
     if beginning == "start":
@@ -25,7 +29,8 @@ print("This is the best RPG game you will play in this period. So the story is p
 ara_ara = input("What do you want to name your character?") 
 
 starting()
-
+if currentRoom = room_1:
+    if 
 print("In this game, there are 5 different movews that you can use"
 "They are punch, slash, explosive shot, armor pierce, and sword storm."
 "Punch does 40 damage if the enemy has no defense and you don't need any weapons")
