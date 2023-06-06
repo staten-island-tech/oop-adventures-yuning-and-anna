@@ -10,6 +10,8 @@ from MOBS.mobs_ import *
 
 from Crying import *
 
+from Nroom import *
+
 
 def Mattack():
     HIT = MOB1.strength - ara_ara.defense
@@ -95,6 +97,84 @@ def moves():
     
 
 currentRoom = room_1
+
+if currentRoom == room_1:
+    if "room1" in alreadyfoughten:    
+        everything_rooms_1()
+    else: 
+        MOB1 = slime
+        MOB2 = slime 
+        MOB3 = slime
+        print(room_1beg)
+        
+
+
+        everything_rooms_1()
+
+if currentRoom == room_2:
+    if "room2" in alreadyfoughten:    
+        everything_rooms_2()
+    else: 
+        MOB1 = skeleton
+        MOB2 = skeleton
+        MOB3 = skeleton
+        print(room_2beg)
+        
+
+
+        everything_rooms_2()
+
+if currentRoom == room_3:
+    if "room3" in alreadyfoughten:    
+        everything_rooms_3()
+    else: 
+        MOB1 = spider
+        MOB2 = spider
+        MOB3 = spider
+        print(room_3beg)
+        
+
+
+        everything_rooms_3()
+
+if currentRoom == room_4:
+    if "room4" in alreadyfoughten:    
+        everything_rooms_4()
+    else: 
+        MOB1 = slime
+        MOB2 = slime 
+        MOB3 = slime
+        print(room_1beg)
+        
+
+
+        everything_rooms_4()
+
+if currentRoom == room_1:
+    if "room1" in alreadyfoughten:    
+        user_move_room_1()
+    else: 
+        MOB1 = slime
+        MOB2 = slime 
+        MOB3 = slime
+        print(room_1beg)
+        
+
+
+        user_move_room_1()
+
+if currentRoom == room_1:
+    if "room1" in alreadyfoughten:    
+        user_move_room_1()
+    else: 
+        MOB1 = slime
+        MOB2 = slime 
+        MOB3 = slime
+        print(room_1beg)
+        
+
+
+        user_move_room_1()
 
 if currentRoom == room_1:
     if "room1" in alreadyfoughten:    
