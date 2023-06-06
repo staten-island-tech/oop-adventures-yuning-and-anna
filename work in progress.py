@@ -56,6 +56,10 @@ def starting():
  
 alreadyfoughten = []
 
+from MOBS.mobs_ import *
+
+
+
 def starting():
     beginning = input("Type start when are ready to begin ")
     if beginning == "start":
