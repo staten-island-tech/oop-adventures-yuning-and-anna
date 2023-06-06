@@ -4,30 +4,44 @@ Item = []
 
 
 freebies = random.randint(1, 1)
-print(freebies)
+
 if freebies == 1:
     if "katana" in Item:
-        freebies = random.randint(2,2)
-    elif weapon_damage > 85:
+        freebies = random.randint(2,3)
+    elif weapon_damage > 84:
         freebies = random.randint(2,2)
         print(freebies)
     else:
         weapon_damage = 85
         Item.append("katana")
         print("Congrats! You have gotten a Katana! Your damage for moves like Slash is now 85!")
-        print(weapon_damage)
-        print(Item)
         
 if freebies == 2:
-    if "dsada" in Item:
-        freebies = random.randint(0, 6)
-    elif weapon_damage > 890:
-        freebies = random.randint(0, 6)
-        print(freebies)
+    if "crossbow" in Item:
+        freebies = random.randint(1, 3)
+    elif firepower > 199:
+        freebies = random.randint(1, 3)
     else:
-        weapon_damage = 85
-        Item.append("dsadsa")
-        print("Congrats! You have gotten a dsadsa! Your damage for moves like Slash is now 85!")
-        print(weapon_damage)
+        firepower = 200
+        Item.append("crossbow")
+        print("Congrats! You have gotten a Crossbow! Your damage for moves like Explosive_Shot is now 200!")
+
+if freebies == 3:
+    if "bonearmor" in Item:
+        wish = random.randint(1, 3)
+    elif defense > 19:
+        wish = random.randint(1, 3)
+    else:
+        defense = 20
+        Item.append("bonearmor")
+        print("Congrats! You have gotten a piece of Bone Armor! Your defense is now 20!")
+
+
+
+
+
+
+
+
         
 
