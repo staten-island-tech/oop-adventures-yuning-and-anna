@@ -93,6 +93,8 @@ def moves():
 "Sword Storm does half the damage of your weapon, but it an an AOE attack, which will attack every enemy.")
     MCchoice = input("What move do you want to use? Only type the first letter of the move.")
     if MCchoice == p:
+        ARAIT = 40
+
 
     
 
@@ -139,53 +141,41 @@ if currentRoom == room_3:
 
 if currentRoom == room_4:
     if "room4" in alreadyfoughten:    
-        everything_rooms_4()
+        everything_room_4()
     else: 
-        MOB1 = slime
+        MOB1 = orc
         MOB2 = slime 
         MOB3 = slime
-        print(room_1beg)
+        print(room_4beg)
         
 
 
-        everything_rooms_4()
+        everything_room_4()
 
-if currentRoom == room_1:
-    if "room1" in alreadyfoughten:    
-        user_move_room_1()
+if currentRoom == room_5:
+    if "room5" in alreadyfoughten:    
+        everything_rooms_5()
     else: 
-        MOB1 = slime
+        MOB1 = BiG_sLIME
         MOB2 = slime 
         MOB3 = slime
-        print(room_1beg)
+        print(room_5beg)
         
 
 
-        user_move_room_1()
+        everything_rooms_5()
 
-if currentRoom == room_1:
-    if "room1" in alreadyfoughten:    
-        user_move_room_1()
+if currentRoom == room_6:
+    if "room6" in alreadyfoughten:    
+        everything_rooms_6()
     else: 
-        MOB1 = slime
-        MOB2 = slime 
+        MOB1 = BiG_sLIME
+        MOB2 = BiG_sLIME 
         MOB3 = slime
-        print(room_1beg)
+        print(room_6beg)
         
 
 
-        user_move_room_1()
+        everything_rooms_6()
 
-if currentRoom == room_1:
-    if "room1" in alreadyfoughten:    
-        user_move_room_1()
-    else: 
-        MOB1 = slime
-        MOB2 = slime 
-        MOB3 = slime
-        print(room_1beg)
-        
-
-
-        user_move_room_1()
 
