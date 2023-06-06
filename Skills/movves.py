@@ -4,6 +4,5 @@ from ChARActer.chARActer import *
 
 Punch = Moves(50,1)
 Slash = Moves(weapon_damage,1)
-Shoot = Moves(firepower,2)
-AP = Moves(40,1)
+Explosive_Shot = Moves(firepower,2)
 AOE = Moves(weapon_damage//2, 1)
