@@ -55,7 +55,7 @@ if CurrentRoom == room_8:
 
 if CurrentRoom == room_9:
     if "room9" in alreadyfoughten:    
-        user_move_room_9()
+        everything_rooms_9()
     else: 
         MOB1 = skeleton
         MOB2 = skeleton
