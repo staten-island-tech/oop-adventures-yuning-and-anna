@@ -8,7 +8,7 @@ from MOBS.mobsC import *
 
 from MOBS.mobs_ import *
 
-from Crying import *
+from main_file_explore import *
 
 from Nroom import *
 
@@ -27,6 +27,8 @@ starting()
 
 moveinfo()
 
+currentRoom = room_1
+
 if currentRoom == room_1:
     weapon_damage = 0
     firepower = 0
@@ -37,6 +39,15 @@ if currentRoom == room_1:
         MOB1 = slime
         MOB2 = slime 
         MOB3 = slime
+        power1 = 10
+        power2 = 10
+        power3 = 10
+        protection1 = 5
+        protection2 = 5
+        protection3 = 5
+        vigor1 = 200
+        vigor2 = 200
+        vigor3 = 200
         print(room_1beg)
         print("Mob 1 is a slime, Mob 2 is a slime, and Mob 3 is a slime.")
         MCchoice()
@@ -54,6 +65,7 @@ if currentRoom == room_2:
         MOB1 = skeleton
         MOB2 = skeleton
         MOB3 = skeleton
+        
         print(room_2beg)
         print("Mob 1 is a skeleton, Mob 2 is a skeleton, and Mob 3 is a skeleton.")
         MCchoice()
