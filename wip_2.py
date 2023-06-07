@@ -9,6 +9,8 @@ from MOBS.mobsC import *
 from MOBS.mobs_ import *
 
 from Crying import *
+
+from Nroom import *
 alreadyfoughten = []
 
 def starting():
@@ -30,39 +32,43 @@ print("In this game, there are 5 different movews that you can use"
 "They are punch, slash, explosive shot, armor pierce, and sword storm."
 "Punch does 40 damage if the enemy has no defense and you don't need any weapons")
 
-CurrentRoom = room_7
 
-if CurrentRoom == room_7:
+if currentRoom == room_7:
     if "room7" in alreadyfoughten:    
-        user_move_room_7()
+        everything_rooms_7()
     else: 
+        MOBAM = 3
         MOB1 = BiG_sLIME
-        MOB2 = BiG_sLIME 
+        MOB2 = BiG_sLIME
         MOB3 = BiG_sLIME
         print(room_7beg)
+        print("Mob 1 is a big slime, Mob 2 is also big slime, and Mob 3 is another big slime.")
+        MCchoice()
 
-        user_move_room_7()
-
-if CurrentRoom == room_8:
+if currentRoom == room_8:
     if "room8" in alreadyfoughten:    
-        user_move_room_8()
+        everything_rooms_8()
     else: 
+        MOBAM = 2
         MOB1 = skeleton
         MOB2 = orc
         print(room_8beg)
+        print("Mob 1 is a armored skely, Mob 2 is also a amoured orc.")
+        MCchoice()
 
-        user_move_room_8()
-
-if CurrentRoom == room_9:
+if currentRoom == room_9:
     if "room9" in alreadyfoughten:    
         everything_rooms_9()
     else: 
+        MOBAM = 4
         MOB1 = skeleton
         MOB2 = skeleton
         MOB3 = orc
         MOB4 = orc
         print(room_9beg)
+        print("Mob 1 is a skeley, Mob 2 is also skeley, and Mob 3 is another orc, plus mob 4 is another orc.")
+        MCchoice()
 
-        user_move_room_9()
 
-if CurrentRoom == 
+if currentRoom == 'CRY_PEASANTS':
+    everything_peasants()
