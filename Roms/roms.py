@@ -12,7 +12,7 @@ room_2 = room(3, 0, 0, 0, 0)
 
 room_3 = room(0, 0, 3, 0, 0)
 
-room_4 = room(0, 0, 0, 3, 0)
+room_4 = room(0, 2, 0, 1, 0)
 
 room_5 = room(0, 2, 0, 0, 1)
 

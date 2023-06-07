@@ -6,3 +6,4 @@ class Mobs():
 class Mob_Moves():
     def __init__(self, stremgth):
         self.stremgth = stremgth 
+

@@ -12,8 +12,6 @@ rooms = {
     'CRY_PEASANTS':{'north': 'room_1', 'south': 'room_1', 'east': 'room_1', 'west': 'room_1'}
 }
 
-def show_instructions():
-    print('The instructions are as follows: north, south, east, west')
 
 def everything_rooms_1():
     def move_rooms_1(direction, room='room_1'):
@@ -33,9 +31,6 @@ def everything_rooms_1():
             return rooms[room]['west']
         
     currentRoom = 'room_1'
-    gameInstructions = 'The instructions are as follows:north,south, east, west'
-    print(gameInstructions)
-    print(currentRoom)
         
 
     userDirection = ''
@@ -44,16 +39,12 @@ def everything_rooms_1():
         if currentRoom == 'room_1':
             if userDirection == 'south':
                 currentRoom = move_rooms_1(userDirection, currentRoom)
-                show_instructions()
                 print(currentRoom)
             elif userDirection == 'east':
                 currentRoom = move_rooms_1(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
         else:
             print('That is not a direction, pick another direction.')
-            print(currentRoom)
-            show_instructions()
+
 
 def everything_rooms_2():
     def move_rooms_2(direction, room='room_2'):
@@ -73,26 +64,18 @@ def everything_rooms_2():
             return rooms[room]['west']
         
     currentRoom = 'room_2'
-    gameInstructions = 'to ways to go are north, south, east, west'
-    print(gameInstructions)
-    print(currentRoom)
 
     userDirection = ''
     while userDirection != 'exit':
-        userDirection = input("Pick a direction, or MUST type exit to exit the game.")
+        userDirection = input("Pick a direction")
         if currentRoom == 'room_2':
             if userDirection == 'south':
                 currentRoom = move_rooms_2(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
             elif userDirection == 'north':
                 currentRoom = move_rooms_2(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
         else:
             print('That is not a direction, pick another direction.')
-            print(currentRoom)
-            show_instructions()
+
 
 def everything_rooms_3():
     def move_rooms_3(direction, room='room_3'):
@@ -112,26 +95,17 @@ def everything_rooms_3():
             return rooms[room]['west']
         
     currentRoom = 'room_3'
-    gameInstructions = 'to ways to go are north, south, east, west'
-    print(gameInstructions)
-    print(currentRoom)
 
     userDirection = ''
     while userDirection != 'exit':
-        userDirection = input("Pick a direction, or MUST type exit to exit the game.")
+        userDirection = input("Pick a direction")
         if currentRoom == 'room_3':
             if userDirection == 'north':
                 currentRoom = move_rooms_3(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
             elif userDirection == 'east':
                 currentRoom = move_rooms_3(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
         else:
             print('That is not a direction, pick another direction.')
-            print(currentRoom)
-            show_instructions()
 
 def everything_room_4():
     def move_rooms_4(direction, room='room_4'):
@@ -151,26 +125,17 @@ def everything_room_4():
             return rooms[room]['west']
     
     currentRoom = 'room_4'
-    gameInstructions = 'to ways to go are north, south, east, west'
-    print(gameInstructions)
-    print(currentRoom)
 
     userDirection = ''
     while userDirection != 'exit':
-        userDirection = input("Pick a direction, or MUST type exit to exit the game.")
+        userDirection = input("Pick a direction")
         if currentRoom == 'room_4':
             if userDirection == 'west':
                 currentRoom = move_rooms_4(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
             elif userDirection == 'south':
                 currentRoom = move_rooms_4(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
         else:
             print('That is not a direction, pick another direction.')
-            print(currentRoom)
-            show_instructions()
 
 def everything_rooms_5():
     def move_rooms_5(direction, room='room_5'):
@@ -190,26 +155,17 @@ def everything_rooms_5():
             return rooms[room]['west']
     
     currentRoom = 'room_5'
-    gameInstructions = 'to ways to go are north, south, east, west'
-    print(gameInstructions)
-    print(currentRoom)
 
     userDirection = ''
     while userDirection != 'exit':
-        userDirection = input("Pick a direction, or MUST type exit to exit the game.")
+        userDirection = input("Pick a direction")
         if currentRoom == 'room_5':
             if userDirection == 'west':
                 currentRoom = move_rooms_5(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
             elif userDirection == 'east':
                 currentRoom = move_rooms_5(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
         else:
             print('That is not a direction, pick another direction.')
-            print(currentRoom)
-            show_instructions()
 
 def everything_rooms_6():
     def move_rooms_6(direction, room='room_6'):
@@ -227,34 +183,20 @@ def everything_rooms_6():
             return rooms[room]['west']
     
     currentRoom = 'room_6'
-    gameInstructions = 'to ways to go are north, south, east, west'
-    print(gameInstructions)
-    print(currentRoom)
-
     userDirection = ''
     while userDirection != 'exit':
-        userDirection = input("Pick a direction, or MUST type exit to exit the game.")
+        userDirection = input("Pick a direction")
         if currentRoom == 'room_6':
             if userDirection == 'west':
                 currentRoom = move_rooms_6(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
             elif userDirection == 'east':
                 currentRoom = move_rooms_6(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
             elif userDirection == 'north':
                 currentRoom = move_rooms_6(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
             elif userDirection == 'south':
                 currentRoom = move_rooms_6(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
         else:
             print('That is not a direction, pick another direction.')
-            print(currentRoom)
-            show_instructions()
 
 def everything_rooms_7():
     def move_rooms_7(direction, room='room_7'):
@@ -274,26 +216,17 @@ def everything_rooms_7():
             return rooms[room]['west']
         
     currentRoom = 'room_7'
-    gameInstructions = 'to ways to go are north, south, east, west'
-    print(gameInstructions)
-    print(currentRoom)
     
     userDirection = ''
     while userDirection != 'exit':
-        userDirection = input("Pick a direction, or MUST type exit to exit the game.")
+        userDirection = input("Pick a direction")
         if currentRoom == 'room_7':
             if userDirection == 'west':
                 currentRoom = move_rooms_7(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
             elif userDirection == 'south':
                 currentRoom = move_rooms_7(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
         else:
             print('That is not a direction, pick another direction.')
-            print(currentRoom)
-            show_instructions()
 
 def everything_rooms_8():
     def move_rooms_8(direction, room='room_8'):
@@ -313,26 +246,17 @@ def everything_rooms_8():
             return rooms[room]['west']
     
     currentRoom = 'room_8'
-    gameInstructions = 'to ways to go are north, south, east, west'
-    print(gameInstructions)
-    print(currentRoom)
 
     userDirection = ''
     while userDirection != 'exit':
-        userDirection = input("Pick a direction, or MUST type exit to exit the game.")
+        userDirection = input("Pick a direction")
         if currentRoom == 'room_8':
             if userDirection == 'west':
                 currentRoom = move_rooms_8(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
             elif userDirection == 'east':
                 currentRoom = move_rooms_8(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
         else:
             print('That is not a direction, pick another direction.')
-            print(currentRoom)
-            show_instructions()
 
 def everything_rooms_9():
     def move_rooms_9(direction, room='room_9'):
@@ -351,30 +275,19 @@ def everything_rooms_9():
             return rooms[room]['west']
     
     currentRoom = 'room_9'
-    gameInstructions = 'to ways to go are north, south, east, west'
-    print(gameInstructions)
-    print(currentRoom)
 
     userDirection = ''
     while userDirection != 'exit':
-        userDirection = input("Pick a direction, or MUST type exit to exit the game.")
+        userDirection = input("Pick a direction")
         if currentRoom == 'room_9':
             if userDirection == 'west':
                 currentRoom = move_rooms_9(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
             elif userDirection == 'east':
                 currentRoom = move_rooms_9(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
             elif userDirection == 'north':
                 currentRoom = move_rooms_9(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
         else:
             print('That is not a direction, pick another direction.')
-            print(currentRoom)
-            show_instructions()
 
 def everything_rooms_10():
     def move_rooms_10(direction, room='room_10'):
@@ -395,20 +308,14 @@ def everything_rooms_10():
             return rooms[room]['west']
     
     currentRoom = 'room_10'
-    gameInstructions = 'to ways to go are north, south, east, west'
-    print(gameInstructions)
-    print(currentRoom)
 
     userDirection = ''
     while userDirection != 'exit':
-        userDirection = input("Pick a direction, or MUST type exit to exit the game.")
+        userDirection = input("Pick a direction")
         if currentRoom == 'room_10':
             if userDirection == 'west':
                 currentRoom = move_rooms_10(userDirection, currentRoom)
-                show_instructions()
-                print(currentRoom)
         else:
             print('That is not a direction, pick another direction.')
-            print(currentRoom)
-            show_instructions()
+
 
