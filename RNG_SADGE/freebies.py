@@ -1,16 +1,13 @@
 import random
-weapon_damage = 0
+from Skills.movves import *
+
 Item = []
-
-
-freebies = random.randint(1, 1)
 
 if freebies == 1:
     if "katana" in Item:
-        freebies = random.randint(2,3)
+        freebies = random.randint(2, 6)
     elif weapon_damage > 84:
-        freebies = random.randint(2,2)
-        print(freebies)
+        freebies = random.randint(2, 6)
     else:
         weapon_damage = 85
         Item.append("katana")
@@ -18,9 +15,9 @@ if freebies == 1:
         
 if freebies == 2:
     if "crossbow" in Item:
-        freebies = random.randint(1, 3)
+        freebies = random.randint(1, 6)
     elif firepower > 199:
-        freebies = random.randint(1, 3)
+        freebies = random.randint(1, 6)
     else:
         firepower = 200
         Item.append("crossbow")
@@ -28,18 +25,43 @@ if freebies == 2:
 
 if freebies == 3:
     if "bonearmor" in Item:
-        wish = random.randint(1, 3)
+        freebies = random.randint(1, 6)
     elif defense > 19:
-        wish = random.randint(1, 3)
+        freebies = random.randint(1, 6)
     else:
         defense = 20
         Item.append("bonearmor")
         print("Congrats! You have gotten a piece of Bone Armor! Your defense is now 20!")
 
+if freebies == 4:
+    if "valkyrie" in Item:
+        freebies = random.randint(1, 6)
+    elif weapon_damage > 109:
+        freebies = random.randint(1, 6)
+    else:
+        weapon_damage = 110
+        Item.append("valkyrie")
+        print("Congrats! You have gotten a Valkyrie! Your damage for moves like Slash is now 110!")
 
+if freebies == 5:
+    if "piercerofshadows" in Item:
+        freebies = random.randint(1, 6)
+    elif firepower > 249:
+        freebies = random.randint(1, 6)
+    else:
+        firepower = 250
+        Item.append("piercerofshadows")
+        print("Congrats! You have gotten a Piercer of Shadows! Your damage for moves like Explosive_Shot is now 250!")
 
-
-
+if freebies == 6:
+    if "mithrilarmor" in Item:
+        freebies = random.randint(1, 6)
+    elif defense > 29:
+        freebies = random.randint(1, 6)
+    else:
+        defense = 30
+        Item.append("mithrilarmor")
+        print("Congrats! You have gotten a piece of Mithril Armor! Your defense is now 30!")
 
 
 
