@@ -41,6 +41,15 @@ if currentRoom == room_7:
         MOB1 = BiG_sLIME
         MOB2 = BiG_sLIME
         MOB3 = BiG_sLIME
+        power1 = 40
+        power2 = 40
+        power3 = 40
+        protection1 = 40
+        protection2 = 40
+        protection3 = 40
+        vigor1 = 800
+        vigor2 = 800
+        vigor3 = 800
         print(room_7beg)
         print("Mob 1 is a big slime, Mob 2 is also big slime, and Mob 3 is another big slime.")
         MCchoice()
@@ -52,6 +61,12 @@ if currentRoom == room_8:
         MOBAM = 2
         MOB1 = skeleton
         MOB2 = orc
+        power1 = 20
+        power2 = 40
+        protection1 = 30
+        protection2 = 60
+        vigor1 = 300
+        vigor2 = 700
         print(room_8beg)
         print("Mob 1 is a armored skely, Mob 2 is also a amoured orc.")
         MCchoice()
@@ -65,10 +80,46 @@ if currentRoom == room_9:
         MOB2 = skeleton
         MOB3 = orc
         MOB4 = orc
+        power1 = 20
+        power2 = 20
+        power3 = 40
+        power4 = 40
+        protection1 = 10
+        protection2 = 10
+        protection3 = 30
+        protection4 = 30
+        vigor1 = 300
+        vigor2 = 300
+        vigor3 = 700
+        vigor4 = 700
         print(room_9beg)
         print("Mob 1 is a skeley, Mob 2 is also skeley, and Mob 3 is another orc, plus mob 4 is another orc.")
         MCchoice()
 
+if currentRoom == room_10:
+    if "room10" in alreadyfoughten:    
+        everything_rooms_10()
+    else: 
+        MOBAM = 4
+        MOB1 = BiG_sLIME
+        MOB2 = BiG_sLIME
+        MOB3 = BiG_sLIME
+        MOB4 = BiG_sLIME
+        power1 = 40
+        power2 = 40
+        power3 = 40
+        power4 = 40
+        protection1 = 40
+        protection2 = 40
+        protection3 = 40
+        protection4 = 40
+        vigor1 = 800
+        vigor2 = 800
+        vigor3 = 800
+        vigor4 = 800
+        print(room_10beg)
+        print("Mob 1 is a big slime, Mob 2 is also big slime, and Mob 3 is another big slime, and you guessed it, mob 4 is a big slime too.")
+        MCchoice()
 
 if currentRoom == 'CRY_PEASANTS':
     everything_peasants()

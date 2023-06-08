@@ -65,7 +65,15 @@ if currentRoom == room_2:
         MOB1 = skeleton
         MOB2 = skeleton
         MOB3 = skeleton
-        
+        power1 = 20
+        power2 = 20
+        power3 = 20
+        protection1 = 10
+        protection2 = 10
+        protection3 = 10
+        vigor1 = 300
+        vigor2 = 300
+        vigor3 = 300
         print(room_2beg)
         print("Mob 1 is a skeleton, Mob 2 is a skeleton, and Mob 3 is a skeleton.")
         MCchoice()
@@ -81,6 +89,15 @@ if currentRoom == room_3:
         MOB1 = spider
         MOB2 = spider
         MOB3 = spider
+        power1 = 30
+        power2 = 30
+        power3 = 30
+        protection1 = 20
+        protection2 = 20
+        protection3 = 20
+        vigor1 = 500
+        vigor2 = 500
+        vigor3 = 500
         print(room_3beg)
         print("Mob 1 is a spider, Mob 2 is a spider, and Mob 3 is a spider.")
         MCchoice()
@@ -96,6 +113,15 @@ if currentRoom == room_4:
         MOB1 = orc
         MOB2 = slime 
         MOB3 = slime
+        power1 = 40
+        power2 = 10
+        power3 = 10
+        protection1 = 30
+        protection2 = 5 
+        protection3 = 5
+        vigor1 = 700
+        vigor2 = 200
+        vigor3 = 200
         print(room_4beg)
         print("Mob 1 is a orc, Mob 2 is a slime, and Mob 3 is a slime.")
         MCchoice()
@@ -111,6 +137,15 @@ if currentRoom == room_5:
         MOB1 = BiG_sLIME
         MOB2 = slime 
         MOB3 = slime
+        power1 = 40
+        power2 = 10
+        power3 = 10
+        protection1 = 40
+        protection2 = 5
+        protection3 = 5
+        vigor1 = 800
+        vigor2 = 200
+        vigor3 = 200
         print(room_5beg)
         print("Mob 1 is a big slime, Mob 2 is a slime, and Mob 3 is a slime.")
         MCchoice()
@@ -126,6 +161,15 @@ if currentRoom == room_6:
         MOB1 = BiG_sLIME
         MOB2 = BiG_sLIME 
         MOB3 = slime
+        power1 = 40
+        power2 = 40
+        power3 = 10
+        protection1 = 40
+        protection2 = 40
+        protection3 = 5
+        vigor1 = 800
+        vigor2 = 800
+        vigor3 = 200
         print(room_6beg)
         print("Mob 1 is a big slime, Mob 2 is a big slime, and Mob 3 is a slime.")
         MCchoice()
