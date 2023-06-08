@@ -1,7 +1,7 @@
 rooms = {
     'room_1':{'south': 'room_2', 'east': 'room_3'},
     'room_2':{'south': 'gambling_2', 'north': 'room_1'},
-    'room_3':{'north': 'room_4', 'east': 'gambling_1'},
+    'room_3':{'north': 'room_4', 'east': 'gambling_1', 'west': 'room_1'},
     'Room_4':{'west' : 'room_1', 'south': 'room_3'},
     'room_5':{'east': 'room_7', 'west': 'gambling_1'},
     'room_6':{'north': 'gambling_1', 'south': 'room_9', 'east': 'CRY_PEASANTS', 'west': 'CRY_PEASANTS'},
@@ -9,7 +9,9 @@ rooms = {
     'room_8':{'east': 'room_9', 'west': 'gambling_2'},
     'room_9':{'east': 'room_10', 'north' : 'room_6', 'west' : 'room_8'},
     'room_10':{'west': 'room_9'},
-    'CRY_PEASANTS':{'north': 'room_1', 'south': 'room_1', 'east': 'room_1', 'west': 'room_1'}
+    'CRY_PEASANTS':{'north': 'room_1', 'south': 'room_1', 'east': 'room_1', 'west': 'room_1'},
+    'gambling_1':{'west': 'room_3', 'east': 'room_5', 'south': 'room_6'},
+    'gambling_2':{'north': 'room_2', 'east': 'CRY_PEASANTS', 'south': 'room_8'}
 }
 
 
@@ -90,8 +92,7 @@ def everything_rooms_3():
             room == 'gambling_1'
             return rooms[room]['east']
         elif direction == 'west':
-            if room == 'room_3':
-                return 'Invalid direction please try again.'
+            room == 'room_1'
             return rooms[room]['west']
         
     currentRoom = 'room_3'
@@ -103,6 +104,8 @@ def everything_rooms_3():
             if userDirection == 'north':
                 currentRoom = move_rooms_3(userDirection, currentRoom)
             elif userDirection == 'east':
+                currentRoom = move_rooms_3(userDirection, currentRoom)
+            elif userDirection == 'west':
                 currentRoom = move_rooms_3(userDirection, currentRoom)
         else:
             print('That is not a direction, pick another direction.')
@@ -318,4 +321,96 @@ def everything_rooms_10():
         else:
             print('That is not a direction, pick another direction.')
 
+def everything_peasants():
+    def move_peasants(direction, room='CRY_PEASANTS'):
+        if direction == 'south':
+            room == 'room_1'
+            return rooms[room]['south']
+        elif direction == 'north':
+            room == 'room_1'
+            return rooms[room]['north']
+        elif direction == 'east':
+            room == 'room_1'
+            return rooms[room]['east']
+        elif direction == 'west':
+            room == 'room_1'
+            return rooms[room]['west']
+        
+    currentRoom = 'CRY_PEASANTS'
 
+    userDirection = ''
+    while userDirection != 'exit':
+        userDirection = input("Pick a direction")
+        if currentRoom == 'room_3':
+            if userDirection == 'north':
+                currentRoom = move_peasants(userDirection, currentRoom)
+            elif userDirection == 'east':
+                currentRoom = move_peasants(userDirection, currentRoom)
+            elif userDirection == 'west':
+                currentRoom = move_peasants(userDirection, currentRoom)
+            elif userDirection == 'south':
+                currentRoom = move_peasants(userDirection, currentRoom)
+        else:
+            print('That is not a direction, pick another direction.')
+
+def gambling_1_everything():
+    def move_gambling_1(direction, room='gambling_1'):
+        if direction == 'south':
+            room == 'room_6'
+            return rooms[room]['south']
+        elif direction == 'north':
+            if room == 'gambling_1':
+                return 'Invalid direction please try again.'
+            return rooms[room]['north']
+        elif direction == 'east':
+            room == 'room_5'
+            return rooms[room]['east']
+        elif direction == 'west':
+            room == 'room_3'
+            return rooms[room]['west']
+    
+    currentRoom = 'gambling_1'
+
+    userDirection = ''
+    while userDirection != 'exit':
+        userDirection = input("Pick a direction")
+        if currentRoom == 'gambling_1':
+            if userDirection == 'west':
+                currentRoom = move_gambling_1(userDirection, currentRoom)
+            elif userDirection == 'south':
+                currentRoom = move_gambling_1(userDirection, currentRoom)
+            elif userDirection == 'east':
+                currentRoom = move_gambling_1(userDirection, currentRoom)
+        else:
+            print('That is not a direction, pick another direction.')
+
+def gambling_2_everything():
+    def move_gambling_2(direction, room='gambling_2'):
+        if direction == 'south':
+            room == 'room_8'
+            return rooms[room]['south']
+        elif direction == 'north':
+            room == 'room_2'
+            return rooms[room]['north']
+        elif direction == 'east':
+            room == 'CRY_PEASANTS'
+            return rooms[room]['east']
+        elif direction == 'west':
+            if room == 'gambling_2':
+                return 'Invalid direction please try again.'
+            return rooms[room]['west']
+    
+    currentRoom = 'gambling_2'
+
+    userDirection = ''
+    while userDirection != 'exit':
+        userDirection = input("Pick a direction")
+        if currentRoom == 'gambling_2':
+            if userDirection == 'west':
+                currentRoom = move_gambling_2(userDirection, currentRoom)
+            elif userDirection == 'east':
+                currentRoom = move_gambling_2(userDirection, currentRoom)
+            elif userDirection == 'north':
+                currentRoom = move_gambling_2(userDirection, currentRoom)
+        else:
+            print('That is not a direction, pick another direction.')
