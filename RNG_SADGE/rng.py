@@ -27,10 +27,10 @@ if wish == 2:
 if wish == 3:
     if "bonearmor" in Item:
         wish = random.randint(1, 15)
-    elif defense > 19:
+    elif araprotect > 19:
         wish = random.randint(1, 15)
     else:
-        defense = 20
+        araprotect = 20
         Item.append("bonearmor")
         print("Congrats! You have gotten a piece of Bone Armor! Your defense is now 20!")
 
@@ -57,10 +57,10 @@ if wish == 5:
 if wish == 6:
     if "mithrilarmor" in Item:
         wish = random.randint(1, 15)
-    elif defense > 29:
+    elif araprotect > 29:
         wish = random.randint(1, 15)
     else:
-        defense = 30
+        araprotect = 30
         Item.append("mithrilarmor")
         print("Congrats! You have gotten a piece of Mithril Armor! Your defense is now 30!")
 
@@ -87,10 +87,10 @@ if wish == 8:
 if wish == 9:
     if "bonearmor" in Item:
         wish = random.randint(1, 15)
-    elif defense > 19:
+    elif araprotect > 19:
         wish = random.randint(1, 15)
     else:
-        defense = 20
+        araprotect = 20
         Item.append("bonearmor")
         print("Congrats! You have gotten a piece of Bone Armor! Your defense is now 20!")
 

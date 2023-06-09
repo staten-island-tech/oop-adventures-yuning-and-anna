@@ -12,7 +12,6 @@ room_10beg = "This is the hardest room there will be in the game, if you made it
 
 
 room_fall = "Uh Oh. This room was a trap for you and going into this room brings you right back to the start. This was not my idea and instead the idea of my partner. SO now you suffer because of him. RIP"
-room_gambling =  "So this room gives you one free item the second you walk into it. However, you can also choose to sacrifice 25 percent of your health you have a chance at getting another item or a punishment. It's your choice :)"
 
 
 afterroom_1 = "There are two ways you can go: east or south."
@@ -25,3 +24,5 @@ afterroom_7 = "There are two ways you can go: west or south"
 afterroom_8 = "There are two ways you can go: south or east"
 afterroom_9 = "There are two ways you can go: west or east"
 afterroom_10 = "There is one way you can go: west. If you have defeated all 10 rooms in this dungeon and you are ready to leave you can type leave to leave the dungeon."
+afterroomgambling1 = "There is three ways you can go: west, east or south"
+afterroomgambling2 = "There are three ways you can go: north, east or south"

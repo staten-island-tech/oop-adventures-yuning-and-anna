@@ -48,26 +48,28 @@ def MCchoice():
         print("Something went wrong. Please make sure you are only typing the first letter of the move in lowercase. It does not matter if the name has two words. Please type only the first letter.")
         CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
 
+araprotect = ara_ara.defense
+
 def Mattack1():
-    HIT = power1 - ara_ara.defense
+    HIT = power1 - araprotect
     aralth = aralth - HIT
     print(MOB1, "has dealt", HIT, "damage to", ara_ara)
     print(ara_ara, "has", aralth,"left")
 
 def Mattack2():
-    HIT = power2 - ara_ara.defense
+    HIT = power2 - araprotect
     aralth = aralth - HIT
     print(MOB2, "has dealt", HIT, "damage to", ara_ara)
     print(ara_ara, "has", aralth,"left")
 
 def Mattack3():
-    HIT = power3 - ara_ara.defense
+    HIT = power3 - araprotect
     aralth = aralth - HIT
     print(MOB3, "has dealt", HIT, "damage to", ara_ara)
     print(ara_ara, "has", aralth,"left")
 
 def Mattack4():
-    HIT = power4 - ara_ara.defense
+    HIT = power4 - araprotect
     aralth = aralth - HIT
     print(MOB4, "has dealt", HIT, "damage to", ara_ara)
     print(ara_ara, "has", aralth,"left")
@@ -115,3 +117,169 @@ def moveinfo():
     "Explosive shot does the damage of your bow, so if you don't have a bow, it does no damage. Additionally, this move takes two rounds, so plan accordingly."
     "Lastly, Air Cutter is an AOE type of move, so it attacks all enemies. It does half the damage of your weapon, so if you don't have a weapon, it does no damage.")
 
+def fighting3():
+    if MOBAM > 0:
+        if vigor1 == 0:
+            imagine.append("mob1")
+            MOBAM = MOBAM - 1
+            print("Congratulations!!!! You have defeated mob 1.")
+            matack3()
+            MCchoice()
+        elif vigor2 == 0:
+            imagine.append("mob2")
+            MOBAM = MOBAM - 1
+            print("Congratulations!!!! You have defeated mob 2.")
+            matack3()
+            MCchoice()
+        elif vigor3 == 0:
+            imagine.append("mob3")
+            MOBAM = MOBAM - 1
+            print("Congratulations!!!! You have defeated mob 3.")
+            matack3()
+            MCchoice()
+        elif aralth = 0:
+            print("You have died to the monsters. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
+        else:
+            matack3()
+            MCchoice()
+    else:
+        print("Congratulations!!!! You have defeated the room!!!! You can now proceed onto the next room.")
+        aralth = 300
+
+def fighting2():
+    if MOBAM > 0:
+        if vigor1 == 0:
+            imagine.append("mob1")
+            MOBAM = MOBAM - 1
+            print("Congratulations!!!! You have defeated mob 1.")
+            matack2()
+            MCchoice()
+        elif vigor2 == 0:
+            imagine.append("mob2")
+            MOBAM = MOBAM - 1
+            print("Congratulations!!!! You have defeated mob 2.")
+            matack2()
+            MCchoice()
+        elif aralth = 0:
+            print("You have died to the monsters. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
+        else:
+            matack2()
+            MCchoice()
+    else:
+        print("Congratulations!!!! You have defeated the room!!!! You can now proceed onto the next room.")
+        aralth = 300
+        
+def fighting4():
+    if MOBAM > 0:
+        if vigor1 == 0:
+            imagine.append("mob1")
+            MOBAM = MOBAM - 1
+            print("Congratulations!!!! You have defeated mob 1.")
+            matack4()
+            MCchoice()
+        elif vigor2 == 0:
+            imagine.append("mob2")
+            MOBAM = MOBAM - 1
+            print("Congratulations!!!! You have defeated mob 2.")
+            matack4()
+            MCchoice()
+        elif vigor3 == 0:
+            imagine.append("mob3")
+            MOBAM = MOBAM - 1
+            print("Congratulations!!!! You have defeated mob 3.")
+            matack4()
+            MCchoice()
+        elif vigor4 == 0:
+            imagine.append("mob4")
+            MOBAM = MOBAM - 1
+            print("Congratulations!!!! You have defeated mob 4.")
+            matack4()
+            MCchoice()
+        elif aralth = 0:
+            print("You have died to the monsters. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
+
+        else:
+            matack4()
+            MCchoice()
+    else:
+        print("Congratulations!!!! You have defeated the room!!!! You can now proceed onto the next room.")
+        aralth = 300
+
+def matack3():
+    if "12" in imagine:
+        Mattack3()
+    elif "23" in imagine:
+        Mattack1()
+    elif "13" in imagine:
+        Mattack2()
+    elif "1" in imagine:
+        Mattack2()
+        Mattack3()
+    elif "2" in imagine:
+        Mattack1()
+        Mattack3()
+    elif "3" in imagine:
+        Mattack1()
+        Mattack2()
+    else:
+        Mattack1()
+        Mattack2()
+        Mattack3()
+
+def matack4():
+    if "123" in imagine:
+        Mattack4()
+    elif "234" in imagine:
+        Mattack1()
+    elif "341" in imagine:
+        Mattack2()
+    elif "412" in imagine:
+        Mattack3()
+    elif "12" in imagine:
+        Mattack3()
+        Mattack4()
+    elif "13" in imagine:
+        Mattack2()
+        Mattack4()
+    elif "14" in imagine:
+        Mattack3()
+        Mattack2()
+    elif "23" in imagine:
+        Mattack1()
+        Mattack4()
+    elif "24" in imagine:
+        Mattack3()
+        Mattack1()
+    elif "34" in imagine:
+        Mattack1()
+        Mattack2()
+    elif "1" in imagine:
+        Mattack2()
+        Mattack3()
+        Mattack4()
+    elif "2" in imagine:
+        Mattack1()
+        Mattack3()
+        Mattack4()
+    elif "3" in imagine:
+        Mattack2()
+        Mattack1()
+        Mattack4()
+    elif "4" in imagine:
+        Mattack2()
+        Mattack3()
+        Mattack1()
+    else:
+        Mattack2()
+        Mattack3()
+        Mattack1()
+        Mattack4()
+
+def matack2():
+    if "1" in imagine:
+        Mattack2()
+    elif "2" in imagine:
+        Mattack1()
+    else:
+        Mattack1()
+        Mattack2()

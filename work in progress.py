@@ -35,6 +35,7 @@ if currentRoom == room_1:
     if "room1" in alreadyfoughten:    
         everything_rooms_1()
     else: 
+        imagine = []
         MOBAM = 3
         MOB1 = slime
         MOB2 = slime 
@@ -50,17 +51,28 @@ if currentRoom == room_1:
         vigor3 = 200
         print(room_1beg)
         print("Mob 1 is a slime, Mob 2 is a slime, and Mob 3 is a slime.")
-        MCchoice()
-        
+        fighting3()
+        print("The mobs blocking the chest have been defeated")
+        chest = input("Do you want to open the chest? Answer using yes or no. ")
+        if chest == "yes":
+            weapon_damage = 60
+            araprotect = 10
+            firepower = 150
+            print("You have obtained a Basic Sword, Leather Armor, and a Hunter Bow."
+            "Your damage for moves like Explosive_Shot is now 150!"
+            "Your damage for moves like Slash is now 60!"
+            "Your defense is now 10!")
+        print(afterroom_1)
 
-
-
+        alreadyfoughten.append("room1")
         everything_rooms_1()
+
 
 if currentRoom == room_2:
     if "room2" in alreadyfoughten:    
         everything_rooms_2()
     else: 
+        imagine = []
         MOBAM = 3
         MOB1 = skeleton
         MOB2 = skeleton
@@ -76,7 +88,9 @@ if currentRoom == room_2:
         vigor3 = 300
         print(room_2beg)
         print("Mob 1 is a skeleton, Mob 2 is a skeleton, and Mob 3 is a skeleton.")
-        MCchoice()
+        fighting3()
+        print(afterroom_2)
+        alreadyfoughten.append("room2")
 
 
         everything_rooms_2()
@@ -85,6 +99,7 @@ if currentRoom == room_3:
     if "room3" in alreadyfoughten:    
         everything_rooms_3()
     else: 
+        imagine = []
         MOBAM = 3
         MOB1 = spider
         MOB2 = spider
@@ -100,7 +115,10 @@ if currentRoom == room_3:
         vigor3 = 500
         print(room_3beg)
         print("Mob 1 is a spider, Mob 2 is a spider, and Mob 3 is a spider.")
-        MCchoice()
+        fighting3()
+        print(afterroom_3)
+        alreadyfoughten.append("room3")
+
 
 
         everything_rooms_3()
@@ -109,6 +127,7 @@ if currentRoom == room_4:
     if "room4" in alreadyfoughten:    
         everything_room_4()
     else: 
+        imagine = []
         MONAM = 3
         MOB1 = orc
         MOB2 = slime 
@@ -124,7 +143,9 @@ if currentRoom == room_4:
         vigor3 = 200
         print(room_4beg)
         print("Mob 1 is a orc, Mob 2 is a slime, and Mob 3 is a slime.")
-        MCchoice()
+        fighting3()
+        print(afterroom_4)
+        alreadyfoughten.append("room4")
 
 
         everything_room_4()
@@ -133,6 +154,7 @@ if currentRoom == room_5:
     if "room5" in alreadyfoughten:    
         everything_rooms_5()
     else: 
+        imagine = []
         MOBAM = 3
         MOB1 = BiG_sLIME
         MOB2 = slime 
@@ -148,7 +170,9 @@ if currentRoom == room_5:
         vigor3 = 200
         print(room_5beg)
         print("Mob 1 is a big slime, Mob 2 is a slime, and Mob 3 is a slime.")
-        MCchoice()
+        fighting3()
+        print(afterroom_5)
+        alreadyfoughten.append("room5")
 
 
         everything_rooms_5()
@@ -157,6 +181,7 @@ if currentRoom == room_6:
     if "room6" in alreadyfoughten:    
         everything_rooms_6()
     else: 
+        imagine = []
         MOBAM = 3
         MOB1 = BiG_sLIME
         MOB2 = BiG_sLIME 
@@ -172,9 +197,219 @@ if currentRoom == room_6:
         vigor3 = 200
         print(room_6beg)
         print("Mob 1 is a big slime, Mob 2 is a big slime, and Mob 3 is a slime.")
-        MCchoice()
-
-
+        fighting3()
+        print(afterroom_6)
+        alreadyfoughten.append("room6")
         everything_rooms_6()
 
 
+if currentRoom == room_7:
+    if "room7" in alreadyfoughten:    
+        everything_rooms_7()
+    else: 
+        imagine = []
+        MOBAM = 3
+        MOB1 = BiG_sLIME
+        MOB2 = BiG_sLIME
+        MOB3 = BiG_sLIME
+        power1 = 40
+        power2 = 40
+        power3 = 40
+        protection1 = 40
+        protection2 = 40
+        protection3 = 40
+        vigor1 = 800
+        vigor2 = 800
+        vigor3 = 800
+        print(room_7beg)
+        print("Mob 1 is a big slime, Mob 2 is also big slime, and Mob 3 is another big slime.")
+        fighting3()
+        print(afterroom_7)
+        alreadyfoughten.append("room7")
+        everything_rooms_7()
+
+if currentRoom == room_8:
+    if "room8" in alreadyfoughten:    
+        everything_rooms_8()
+    else: 
+        imagine = []
+        MOBAM = 2
+        MOB1 = skeleton
+        MOB2 = orc
+        power1 = 20
+        power2 = 40
+        protection1 = 30
+        protection2 = 60
+        vigor1 = 300
+        vigor2 = 700
+        print(room_8beg)
+        print("Mob 1 is a armored skely, Mob 2 is also a amoured orc.")
+        fighting2()
+        print(afterroom_8)
+        alreadyfoughten.append("room8")
+        everything_rooms_8()
+
+if currentRoom == room_9:
+    if "room9" in alreadyfoughten:    
+        everything_rooms_9()
+    else: 
+        imagine = []
+        MOBAM = 4
+        MOB1 = skeleton
+        MOB2 = skeleton
+        MOB3 = orc
+        MOB4 = orc
+        power1 = 20
+        power2 = 20
+        power3 = 40
+        power4 = 40
+        protection1 = 10
+        protection2 = 10
+        protection3 = 30
+        protection4 = 30
+        vigor1 = 300
+        vigor2 = 300
+        vigor3 = 700
+        vigor4 = 700
+        print(room_9beg)
+        print("Mob 1 is a skeley, Mob 2 is also skeley, and Mob 3 is another orc, plus mob 4 is another orc.")
+        fighting4()
+        print(afterroom_9)
+        alreadyfoughten.append("room9")
+        everything_rooms_9()
+
+if currentRoom == room_10:
+    if "room10" in alreadyfoughten:    
+        everything_rooms_10()
+    elif "1234567890" in alreadyfoughten:
+        print("You have gotten out of the cave sucessfully and you are no longer that big of a dissapointment to your parents. You are now D rank and is slightly better than the normal human. Congratulations!!!!")
+    else: 
+        imagine = []
+        MOBAM = 4
+        MOB1 = BiG_sLIME
+        MOB2 = BiG_sLIME
+        MOB3 = BiG_sLIME
+        MOB4 = BiG_sLIME
+        power1 = 40
+        power2 = 40
+        power3 = 40
+        power4 = 40
+        protection1 = 40
+        protection2 = 40
+        protection3 = 40
+        protection4 = 40
+        vigor1 = 800
+        vigor2 = 800
+        vigor3 = 800
+        vigor4 = 800
+        print(room_10beg)
+        print("Mob 1 is a big slime, Mob 2 is also big slime, and Mob 3 is another big slime, and you guessed it, mob 4 is a big slime too.")
+        fighting4()
+        print(afterroom_10)
+        alreadyfoughten.append("room10")
+        everything_rooms_10()
+
+if currentRoom == 'CRY_PEASANTS':
+    print(room_fall)
+    everything_peasants()
+
+if currentRoom == 'gambling_1':
+    if "gambling1" in alreadyfoughten:
+        decisions = input("Do you want to sacrifice 10 percent of your health for a chance to get better gear? Type yes or no.")
+        if decisions == yes:
+            aralth = aralth - 30
+            print("Your health is now", aralth)
+            wish = random.randint(1, 15)
+        elif decisions == no:
+            print(afterroomgambling1)
+            aralth = 300
+            gambling_1_everything()
+        elif aralth = 0:
+            print("You have died due to being too greedy. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
+        else:
+            print("Something went wrong, please try again.")
+    elif "gambling2 " in alreadyfoughten:
+        decisions = input("Do you want to sacrifice 10 percent of your health for a chance to get better gear? Type yes or no.")
+        if decisions == yes:
+            aralth = aralth - 30
+            print("Your health is now", aralth)
+            wish = random.randint(1, 15)
+        elif decisions == no:
+            print(afterroomgambling1)
+            aralth = 300
+            alreadyfoughten.append("gambling1")
+            gambling_1_everything()
+            
+        elif aralth = 0:
+            print("You have died due to being too greedy. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
+        else:
+            print("Something went wrong, please try again.")
+    else:
+        print("Because it is your first time coming across a wishing room, you can get one piece of gear for free. However, after this you need to sacrifice 10 percent of your health for a chance to get gear.")
+        freebies = random.randint(1, 6)
+        decisions = input("Do you want to sacrifice 10 percent of your health for a chance to get better gear? Type yes or no.")
+        if decisions == yes:
+            aralth = aralth - 30
+            print("Your health is now", aralth)
+            wish = random.randint(1, 15)
+        elif aralth = 0:
+            print("You have died due to being too greedy. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
+        elif decisions == no:
+            print(afterroomgambling1)
+            aralth = 300
+            alreadyfoughten.append("gambling1")
+            gambling_1_everything()
+        else:
+            print("Something went wrong, please try again.")
+
+if currentRoom == 'gambling_2':
+    if "gambling2" in alreadyfoughten:
+        decisions = input("Do you want to sacrifice 10 percent of your health for a chance to get better gear? Type yes or no.")
+        if decisions == yes:
+            aralth = aralth - 30
+            print("Your health is now", aralth)
+            wish = random.randint(1, 15)
+        elif decisions == no:
+            print(afterroomgambling2)
+            aralth = 300
+            gambling_2_everything()
+        elif aralth = 0:
+            print("You have died due to being too greedy. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
+        else:
+            print("Something went wrong, please try again.")
+    elif "gambling1 " in alreadyfoughten:
+        decisions = input("Do you want to sacrifice 10 percent of your health for a chance to get better gear? Type yes or no.")
+        if decisions == yes:
+            aralth = aralth - 30
+            print("Your health is now", aralth)
+            wish = random.randint(1, 15)
+        elif decisions == no:
+            print(afterroomgambling2)
+            aralth = 300
+            alreadyfoughten.append("gambling2")
+            gambling_2_everything()
+            
+        elif aralth = 0:
+            print("You have died due to being too greedy. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
+        else:
+            print("Something went wrong, please try again.")
+            decisions = input("Do you want to sacrifice 10 percent of your health for a chance to get better gear? Type yes or no.")
+    else:
+        print("Because it is your first time coming across a wishing room, you can get one piece of gear for free. However, after this you need to sacrifice 10 percent of your health for a chance to get gear. It's your choice :)")
+        freebies = random.randint(1, 6)
+        decisions = input("Do you want to sacrifice 10 percent of your health for a chance to get better gear? Type yes or no.")
+        if decisions == yes:
+            aralth = aralth - 30
+            print("Your health is now", aralth)
+            wish = random.randint(1, 15)
+        elif decisions == no:
+            print(afterroomgambling2)
+            aralth = 300
+            alreadyfoughten.append("gambling2")
+            gambling_2_everything()
+            
+        elif aralth = 0:
+            print("You have died due to being too greedy. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
+        else:
+            print("Something went wrong, please try again.")
+            decisions = input("Do you want to sacrifice 10 percent of your health for a chance to get better gear? Type yes or no.")

@@ -26,10 +26,10 @@ if freebies == 2:
 if freebies == 3:
     if "bonearmor" in Item:
         freebies = random.randint(1, 6)
-    elif defense > 19:
+    elif araprotect > 19:
         freebies = random.randint(1, 6)
     else:
-        defense = 20
+        araprotect = 20
         Item.append("bonearmor")
         print("Congrats! You have gotten a piece of Bone Armor! Your defense is now 20!")
 
@@ -56,10 +56,10 @@ if freebies == 5:
 if freebies == 6:
     if "mithrilarmor" in Item:
         freebies = random.randint(1, 6)
-    elif defense > 29:
+    elif araprotect > 29:
         freebies = random.randint(1, 6)
     else:
-        defense = 30
+        araprotect = 30
         Item.append("mithrilarmor")
         print("Congrats! You have gotten a piece of Mithril Armor! Your defense is now 30!")
 

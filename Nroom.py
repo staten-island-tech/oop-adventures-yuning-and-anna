@@ -1,7 +1,7 @@
 rooms = {
     'room_1':{'south': 'room_2', 'east': 'room_3'},
     'room_2':{'south': 'gambling_2', 'north': 'room_1'},
-    'room_3':{'north': 'room_4', 'east': 'gambling_1', 'west': 'room_1'},
+    'room_3':{'north': 'room_4', 'east': 'gambling_1'},
     'Room_4':{'west' : 'room_1', 'south': 'room_3'},
     'room_5':{'east': 'room_7', 'west': 'gambling_1'},
     'room_6':{'north': 'gambling_1', 'south': 'room_9', 'east': 'CRY_PEASANTS', 'west': 'CRY_PEASANTS'},
@@ -9,9 +9,7 @@ rooms = {
     'room_8':{'east': 'room_9', 'west': 'gambling_2'},
     'room_9':{'east': 'room_10', 'north' : 'room_6', 'west' : 'room_8'},
     'room_10':{'west': 'room_9'},
-    'CRY_PEASANTS':{'north': 'room_1', 'south': 'room_1', 'east': 'room_1', 'west': 'room_1'},
-    'gambling_1':{'west': 'room_3', 'east': 'room_5', 'south': 'room_6'},
-    'gambling_2':{'north': 'room_2', 'east': 'CRY_PEASANTS', 'south': 'room_8'}
+    'CRY_PEASANTS':{'north': 'room_1', 'south': 'room_1', 'east': 'room_1', 'west': 'room_1'}
 }
 
 
@@ -92,7 +90,8 @@ def everything_rooms_3():
             room == 'gambling_1'
             return rooms[room]['east']
         elif direction == 'west':
-            room == 'room_1'
+            if room == 'room_3':
+                return 'Invalid direction please try again.'
             return rooms[room]['west']
         
     currentRoom = 'room_3'
@@ -104,8 +103,6 @@ def everything_rooms_3():
             if userDirection == 'north':
                 currentRoom = move_rooms_3(userDirection, currentRoom)
             elif userDirection == 'east':
-                currentRoom = move_rooms_3(userDirection, currentRoom)
-            elif userDirection == 'west':
                 currentRoom = move_rooms_3(userDirection, currentRoom)
         else:
             print('That is not a direction, pick another direction.')
