@@ -1,7 +1,12 @@
 import random
-from Skills.movves import *
-
+from main_file import *
+from ChARActer.chARActer import *
 Item = []
+
+freebies = random.randint(0, 0)
+weapon_damage = 0
+firepower = 0
+araprotect = 0   
 
 if freebies == 1:
     if "katana" in Item:

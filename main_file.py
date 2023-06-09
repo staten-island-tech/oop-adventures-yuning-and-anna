@@ -13,7 +13,9 @@ from Nroom import *
 from RNG_SADGE.freebies import *
 
 from RNG_SADGE.rng import *
-
+firepower = 0
+ARAIT = 0
+weapon_damage = 0
 def starting():
     beginning = input("Type start when are ready to begin ")
     if beginning == "start":
@@ -198,7 +200,7 @@ def fighting4():
             print("Congratulations!!!! You have defeated mob 4.")
             matack4()
             MCchoice()
-        elif aralth = 0:
+        elif aralth == 0:
             print("You have died to the monsters. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
 
         else:

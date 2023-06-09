@@ -1,13 +1,19 @@
 import random
-from Skills.movves import *
 from ChARActer.chARActer import *
 from RNG_SADGE.freebies import Item
+from main_file import *
+wish = random.randint(0, 0)
+weapon_damage = 0
+firepower = 0
+araprotect = 0
+
+
 
 if wish == 1:
     if "katana" in Item:
         wish = random.randint(2, 15)
     elif weapon_damage > 84:
-        wish = random.randint(2, 15)
+        wish = random.randint(1, 15)
     else:
         weapon_damage = 85
         Item.append("katana")
@@ -23,6 +29,7 @@ if wish == 2:
         firepower = 200
         Item.append("crossbow")
         print("Congrats! You have gotten a Crossbow! Your damage for moves like Explosive_Shot is now 200!")
+
 
 if wish == 3:
     if "bonearmor" in Item:
