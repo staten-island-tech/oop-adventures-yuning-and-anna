@@ -1,7 +1,6 @@
 import random
 from ChARActer.chARActer import *
 from RNG_SADGE.freebies import Item
-from main_file import *
 wish = random.randint(0, 0)
 weapon_damage = 0
 firepower = 0

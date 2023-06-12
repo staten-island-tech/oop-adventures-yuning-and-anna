@@ -13,9 +13,7 @@ from Nroom import *
 from RNG_SADGE.freebies import *
 
 from RNG_SADGE.rng import *
-firepower = 0
-ARAIT = 0
-weapon_damage = 0
+
 def starting(): 
     beginning = input("Type start when are ready to begin ")
     if beginning == "start":
@@ -24,109 +22,34 @@ def starting():
         print("Try again when you are ready")
         beginning = input("Type start when are ready to begin ")
 
-def MCchoice():
-    moveinfo()
-    CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
-    if CHOICE == "p":
-        ARAIT = "40"
-        Mobchoice()
-    elif CHOICE == "e":
-        ARAIT = firepower
-        Mobchoice()
-    elif CHOICE == "s":
-        ARAIT = weapon_damage
-        Mobchoice()
-    elif CHOICE == "a":
-        ARAIT = weapon_damage/2
-        if MOBAM == 2:
-            arack1()
-            arack2()
-        if MOBAM == 3:
-            arack1()
-            arack2()
-            arack3()
-        if MOBAM == 4:
-            arack1()
-            arack2()
-            arack3()
-            arack4()
-    else:
-        print("Something went wrong. Please make sure you are only typing the first letter of the move in lowercase. It does not matter if the name has two words. Please type only the first letter.")
-        CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
-
-
-
 def Mattack1():
-    global MOB1
     global aralth
     HIT = power1 - araprotect
     aralth = aralth - HIT
-    print(MOB1, "has dealt", HIT, "damage to", ara_ara)
+    print("Mob 1 has dealt", HIT, "damage to", ara_ara)
     print(ara_ara, "has", aralth,"left")
 
 def Mattack2():
-    global MOB2
     global aralth
     HIT = power2 - araprotect
     aralth = aralth - HIT
-    print(MOB2, "has dealt", HIT, "damage to", ara_ara)
+    print("Mob 2 has dealt", HIT, "damage to", ara_ara)
     print(ara_ara, "has", aralth,"left")
 
 def Mattack3():
-    global MOB3
     global aralth
     HIT = power3 - araprotect
     aralth = aralth - HIT
-    print(MOB3, "has dealt", HIT, "damage to", ara_ara)
+    print("Mob 3 has dealt", HIT, "damage to", ara_ara)
     print(ara_ara, "has", aralth,"left")
 
 def Mattack4():
-    global MOB4
     global aralth
     HIT = power4 - araprotect
     aralth = aralth - HIT
-    print(MOB4, "has dealt", HIT, "damage to", ara_ara)
+    print("Mob 4 has dealt", HIT, "damage to", ara_ara)
     print(ara_ara, "has", aralth,"left")
 
-def arack1():
-    global vigor1
-    vigor1 = vigor1 - ARAIT + protection1
-    print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
-    print("Mob 1 has", vigor1, "health left")
-
-def arack2():
-    global vigor2
-    vigor2 = vigor2 - ARAIT + protection2
-    print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
-    print("Mob 2 has", vigor2, "health left")
-
-def arack3():
-    global vigor3
-    vigor3 = vigor3 - ARAIT + protection3
-    print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
-    print("Mob 3 has", vigor3, "health left")
-
-def arack4():
-    global vigor4
-    vigor4 = vigor4 - ARAIT + protection4
-    print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
-    print("Mob 4 has", vigor4 , "health left")
-
-
-
-def Mobchoice():
-    BOM = input("List the number of the mob you want to fight against.")
-    if BOM == ('1'):
-        arack1()
-    elif BOM == ('2'):
-        arack2()
-    elif BOM == ('3'):
-        arack3()
-    elif BOM == ('4'):
-        arack4()
-    else: 
-        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
- 
 def moveinfo():
     print("In this game, there are 5 different moves that you can use"
     "They are punch, slash, explosive shot, armor pierce, and air cutter."
@@ -135,111 +58,20 @@ def moveinfo():
     "Explosive shot does the damage of your bow, so if you don't have a bow, it does no damage. Additionally, this move takes two rounds, so plan accordingly."
     "Lastly, Air Cutter is an AOE type of move, so it attacks all enemies. It does half the damage of your weapon, so if you don't have a weapon, it does no damage.")
 
-def fighting2():
-    if MOBAM > 0:
-        if vigor1 == 0:
-            imagine.append("mob1")
-            MOBAM = MOBAM - 1
-            print("Congratulations!!!! You have defeated mob 1.")
-            matack2()
-            MCchoice()
-        elif vigor2 == 0:
-            imagine.append("mob2")
-            MOBAM = MOBAM - 1
-            print("Congratulations!!!! You have defeated mob 2.")
-            matack2()
-            MCchoice()
-        elif aralth == 0:
-            print("You have died to the monsters. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
-        else:
-            matack2()
-            MCchoice()
-    else:
-        print("Congratulations!!!! You have defeated the room!!!! You can now proceed onto the next room.")
-        aralth = 300
-
-def fighting3():
-    global MOBAM
-    global aralth
-    while MOBAM > 0:
-        if MOBAM > 0:
-            if vigor1 == 0:
-                imagine.append("mob1")
-                MOBAM = MOBAM - 1
-                print("Congratulations!!!! You have defeated mob 1.")
-                matack3()
-                MCchoice()
-            if vigor2 == 0:
-                imagine.append("mob2")
-                MOBAM = MOBAM - 1
-                print("Congratulations!!!! You have defeated mob 2.")
-                matack3()
-                MCchoice()
-            if vigor3 == 0:
-                imagine.append("mob3")
-                MOBAM = MOBAM - 1
-                print("Congratulations!!!! You have defeated mob 3.")
-                matack3()
-                MCchoice()
-            elif aralth == 0:
-                print("You have died to the monsters. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
-            else:
-                matack3()
-                MCchoice()
-        else:
-            print("Congratulations!!!! You have defeated the room!!!! You can now proceed onto the next room.")
-            aralth = 300
-
-def fighting4():
-    if MOBAM > 0:
-        if vigor1 == 0:
-            imagine.append("mob1")
-            MOBAM = MOBAM - 1
-            print("Congratulations!!!! You have defeated mob 1.")
-            matack4()
-            MCchoice()
-        elif vigor2 == 0:
-            imagine.append("mob2")
-            MOBAM = MOBAM - 1
-            print("Congratulations!!!! You have defeated mob 2.")
-            matack4()
-            MCchoice()
-        elif vigor3 == 0:
-            imagine.append("mob3")
-            MOBAM = MOBAM - 1
-            print("Congratulations!!!! You have defeated mob 3.")
-            matack4()
-            MCchoice()
-        elif vigor4 == 0:
-            imagine.append("mob4")
-            MOBAM = MOBAM - 1
-            print("Congratulations!!!! You have defeated mob 4.")
-            matack4()
-            MCchoice()
-        elif aralth == 0:
-            print("You have died to the monsters. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
-
-        else:
-            matack4()
-            MCchoice()
-    else:
-        print("Congratulations!!!! You have defeated the room!!!! You can now proceed onto the next room.")
-        aralth = 300
-
 def matack3():
-    if "12" in imagine:
+    if "mob1" in imagine and "mob2" in imagine:
         Mattack3()
-    elif "23" in imagine:
+    elif "mob3" in imagine and "mob2" in imagine:
         Mattack1()
-    elif "13" in imagine:
+    elif "mob1" in imagine and "mob3" in imagine:
         Mattack2()
-    elif "1" in imagine:
+    elif "mob1" in imagine:
         Mattack2()
         Mattack3()
-    elif "2" in imagine:
+    elif "mob2" in imagine:
         Mattack1()
         Mattack3()
-    elif "3" in imagine:
+    elif "mob3" in imagine:
         Mattack1()
         Mattack2()
     else:
@@ -317,48 +149,252 @@ starting()
 
 moveinfo()
 
-currentRoom = room_1
+currentRoom = 1
 
-if currentRoom == room_1:
+if currentRoom == 1:
     weapon_damage = 0
     firepower = 0
     if "room1" in alreadyfoughten:    
         everything_rooms_1()
-    else: 
+    else:
         imagine = []
-        MOBAM = 3
         MOB1 = slime
         MOB2 = slime 
         MOB3 = slime
+        vigor1 = 200
+        vigor2 = 200
+        vigor3 = 200
         power1 = 10
         power2 = 10
         power3 = 10
         protection1 = 5
         protection2 = 5
         protection3 = 5
-        vigor1 = 200
-        vigor2 = 200
-        vigor3 = 200
+        MOBAM = 3
+        def MCchoice():
+            vigor1 = 200
+            vigor2 = 200
+            vigor3 = 200
+            moveinfo()
+            CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
+            if CHOICE == "p":
+                ARAIT = int(60)
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            global vigor1
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to Mob 1")
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            global vigor2
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to Mob 2")
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            global vigor3
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to Mob 3")
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                        CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
+
+                Mobchoice()
+            elif CHOICE == "e":
+                ARAIT = firepower
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            global vigor1
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            global vigor2
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            global vigor3
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                        CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
+
+                Mobchoice()
+            elif CHOICE == "s":
+                ARAIT = weapon_damage
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            global vigor1
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            global vigor2
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            global vigor3
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                        CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
+
+                Mobchoice()
+            elif CHOICE == "a":
+                ARAIT = weapon_damage/2
+                if MOBAM == 2:
+                    def arack1():
+                        global vigor1
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        global vigor2
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    arack1()
+                    arack2()
+                if MOBAM == 3:
+                    def arack1():
+                        global vigor1
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        global vigor2
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    def arack3():
+                        global vigor3
+                        vigor3 = vigor3 - ARAIT + protection3
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                        print("Mob 3 has", vigor3, "health left")
+                    arack1()
+                    arack2()
+                    arack3()
+                if MOBAM == 4:
+                    def arack1():
+                        global vigor1
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        global vigor2
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    def arack3():
+                            global vigor3
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                    def arack4():
+                            global vigor4
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                    arack1()
+                    arack2()
+                    arack3()
+                    arack4()
+            else:
+                print("Something went wrong. Please make sure you are only typing the first letter of the move in lowercase. It does not matter if the name has two words. Please type only the first letter.")
+                CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
+        def fighting3():
+            global MOBAM
+            global aralth
+            while MOBAM > 0:
+                if aralth <= 0:
+                    print("You have died to the monsters. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
+
+                elif MOBAM > 0:
+                    if vigor3 <= 0:
+                        if "mob3" in imagine:
+                            matack3()
+                            MCchoice()
+                        else:
+                            imagine.append("mob3")
+                            MOBAM = MOBAM - 1
+                            print("Congratulations!!!! You have defeated mob 3.")
+                            matack3()                            
+                            MCchoice()
+                    elif vigor2 <= 0:
+                        if "mob2" in imagine:
+                            matack3()
+                            MCchoice()
+                        else:
+                            imagine.append("mob2")
+                            MOBAM = MOBAM - 1
+                            print("Congratulations!!!! You have defeated mob 2.")
+                            matack3()
+                            MCchoice()
+                    elif vigor1 <= 0:
+                        if "mob1" in imagine:
+                            matack3()
+                            MCchoice()
+                        else:
+                            imagine.append("mob1")
+                            MOBAM = MOBAM - 1
+                            print("Congratulations!!!! You have defeated mob 1.")
+                            matack3()
+                            MCchoice()
+                    else:
+                        matack3()
+                        MCchoice()
+                else:
+                    print("Congratulations!!!! You have defeated the room!!!! You can now proceed onto the next room.")
+                    aralth = 300
         print(room_1beg)
         print("Mob 1 is a slime, Mob 2 is a slime, and Mob 3 is a slime.")
         fighting3()
         print("The mobs blocking the chest have been defeated")
         chest = input("Do you want to open the chest? Answer using yes or no. ")
         if chest == "yes":
-            weapon_damage = 60
-            araprotect = 10
-            firepower = 150
+            weapon_damage = 140
+            araprotect = 20
+            firepower = 290
             print("You have obtained a Basic Sword, Leather Armor, and a Hunter Bow."
-            "Your damage for moves like Explosive_Shot is now 150!"
-            "Your damage for moves like Slash is now 60!"
-            "Your defense is now 10!")
+            "Your damage for moves like Explosive_Shot is now 290!"
+            "Your damage for moves like Slash is now 140!"
+            "Your defense is now 20!")
         print(afterroom_1)
 
         alreadyfoughten.append("room1")
         everything_rooms_1()
-
-
-if currentRoom == room_2:
+weapon_damage = 140
+araprotect = 20
+firepower = 150
+currentRoom = 3
+if currentRoom == 2:
     if "room2" in alreadyfoughten:    
         everything_rooms_2()
     else: 
@@ -376,6 +412,190 @@ if currentRoom == room_2:
         vigor1 = 300
         vigor2 = 300
         vigor3 = 300
+        def fighting3():
+            global MOBAM
+            global aralth
+            while MOBAM > 0:
+                if MOBAM > 0:
+                    if vigor1 == 0:
+                        imagine.append("mob1")
+                        MOBAM = MOBAM - 1
+                        print("Congratulations!!!! You have defeated mob 1.")
+                        matack3()
+                        MCchoice()
+                    if vigor2 == 0:
+                        imagine.append("mob2")
+                        MOBAM = MOBAM - 1
+                        print("Congratulations!!!! You have defeated mob 2.")
+                        matack3()
+                        MCchoice()
+                    if vigor3 == 0:
+                        imagine.append("mob3")
+                        MOBAM = MOBAM - 1
+                        print("Congratulations!!!! You have defeated mob 3.")
+                        matack3()
+                        MCchoice()
+                    else:
+                        matack3()
+                        MCchoice()
+                elif aralth == 0:
+                        print("You have died to the monsters. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
+
+                else:
+                    print("Congratulations!!!! You have defeated the room!!!! You can now proceed onto the next room.")
+                    aralth = 300
+        def MCchoice():
+            moveinfo()
+            global vigor1
+            global vigor2
+            global vigor3
+            CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
+            if CHOICE == "p":
+                ARAIT = int(40)
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "e":
+                ARAIT = firepower
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "s":
+                ARAIT = weapon_damage
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "a":
+                ARAIT = weapon_damage/2
+                if MOBAM == 2:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    arack1()
+                    arack2()
+                if MOBAM == 3:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                    arack1()
+                    arack2()
+                    arack3()
+                if MOBAM == 4:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                    def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                    arack1()
+                    arack2()
+                    arack3()
+                    arack4()
+            else:
+                print("Something went wrong. Please make sure you are only typing the first letter of the move in lowercase. It does not matter if the name has two words. Please type only the first letter.")
+                CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
         print(room_2beg)
         print("Mob 1 is a skeleton, Mob 2 is a skeleton, and Mob 3 is a skeleton.")
         fighting3()
@@ -385,11 +605,12 @@ if currentRoom == room_2:
 
         everything_rooms_2()
 
-if currentRoom == room_3:
+if currentRoom == 3:
     if "room3" in alreadyfoughten:    
         everything_rooms_3()
     else: 
         imagine = []
+        aralth = 300
         MOBAM = 3
         MOB1 = spider
         MOB2 = spider
@@ -403,7 +624,210 @@ if currentRoom == room_3:
         vigor1 = 500
         vigor2 = 500
         vigor3 = 500
-        print(room_3beg)
+
+        def MCchoice():
+            vigor1 = 500
+            vigor2 = 500
+            vigor3 = 500
+            moveinfo()
+            CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
+            if CHOICE == "p":
+                ARAIT = int(60)
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            global vigor1
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            global vigor2
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            global vigor3
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                        CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
+
+                Mobchoice()
+            elif CHOICE == "e":
+                ARAIT = firepower
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            global vigor1
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            global vigor2
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            global vigor3
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                        CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
+
+                Mobchoice()
+            elif CHOICE == "s":
+                ARAIT = weapon_damage
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            global vigor1
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            global vigor2
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            global vigor3
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                        CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
+
+                Mobchoice()
+            elif CHOICE == "a":
+                ARAIT = weapon_damage/2
+                if MOBAM == 2:
+                    def arack1():
+                        global vigor1
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        global vigor2
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    arack1()
+                    arack2()
+                if MOBAM == 3:
+                    def arack1():
+                        global vigor1
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        global vigor2
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    def arack3():
+                        global vigor3
+                        vigor3 = vigor3 - ARAIT + protection3
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                        print("Mob 3 has", vigor3, "health left")
+                    arack1()
+                    arack2()
+                    arack3()
+                if MOBAM == 4:
+                    def arack1():
+                        global vigor1
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        global vigor2
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    def arack3():
+                            global vigor3
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                    def arack4():
+                            global vigor4
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                    arack1()
+                    arack2()
+                    arack3()
+                    arack4()
+            else:
+                print("Something went wrong. Please make sure you are only typing the first letter of the move in lowercase. It does not matter if the name has two words. Please type only the first letter.")
+                CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
+        def fighting3():
+            global MOBAM
+            global aralth
+            while MOBAM > 0:
+                if aralth <= 0:
+                    print("You have died to the monsters. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
+
+                elif MOBAM > 0:
+                    if vigor3 <= 0:
+                        if "mob3" in imagine:
+                            matack3()
+                            MCchoice()
+                        else:
+                            imagine.append("mob3")
+                            MOBAM = MOBAM - 1
+                            print("Congratulations!!!! You have defeated mob 3.")
+                            matack3()                            
+                            MCchoice()
+                    elif vigor2 <= 0:
+                        if "mob2" in imagine:
+                            matack3()
+                            MCchoice()
+                        else:
+                            imagine.append("mob2")
+                            MOBAM = MOBAM - 1
+                            print("Congratulations!!!! You have defeated mob 2.")
+                            matack3()
+                            MCchoice()
+                    elif vigor1 <= 0:
+                        if "mob1" in imagine:
+                            matack3()
+                            MCchoice()
+                        else:
+                            imagine.append("mob1")
+                            MOBAM = MOBAM - 1
+                            print("Congratulations!!!! You have defeated mob 1.")
+                            matack3()
+                            MCchoice()
+                    else:
+                        matack3()
+                        MCchoice()
+                else:
+                    print("Congratulations!!!! You have defeated the room!!!! You can now proceed onto the next room.")
+                    aralth = 300        
+                    
         print("Mob 1 is a spider, Mob 2 is a spider, and Mob 3 is a spider.")
         fighting3()
         print(afterroom_3)
@@ -431,6 +855,190 @@ if currentRoom == room_4:
         vigor1 = 700
         vigor2 = 200
         vigor3 = 200
+        def fighting3():
+            global MOBAM
+            global aralth
+            while MOBAM > 0:
+                if MOBAM > 0:
+                    if vigor1 == 0:
+                        imagine.append("mob1")
+                        MOBAM = MOBAM - 1
+                        print("Congratulations!!!! You have defeated mob 1.")
+                        matack3()
+                        MCchoice()
+                    if vigor2 == 0:
+                        imagine.append("mob2")
+                        MOBAM = MOBAM - 1
+                        print("Congratulations!!!! You have defeated mob 2.")
+                        matack3()
+                        MCchoice()
+                    if vigor3 == 0:
+                        imagine.append("mob3")
+                        MOBAM = MOBAM - 1
+                        print("Congratulations!!!! You have defeated mob 3.")
+                        matack3()
+                        MCchoice()
+                    else:
+                        matack3()
+                        MCchoice()
+                elif aralth == 0:
+                        print("You have died to the monsters. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
+
+                else:
+                    print("Congratulations!!!! You have defeated the room!!!! You can now proceed onto the next room.")
+                    aralth = 300
+        def MCchoice():
+            moveinfo()
+            global vigor1
+            global vigor2
+            global vigor3
+            CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
+            if CHOICE == "p":
+                ARAIT = int(40)
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "e":
+                ARAIT = firepower
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "s":
+                ARAIT = weapon_damage
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "a":
+                ARAIT = weapon_damage/2
+                if MOBAM == 2:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    arack1()
+                    arack2()
+                if MOBAM == 3:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                    arack1()
+                    arack2()
+                    arack3()
+                if MOBAM == 4:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                    def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                    arack1()
+                    arack2()
+                    arack3()
+                    arack4()
+            else:
+                print("Something went wrong. Please make sure you are only typing the first letter of the move in lowercase. It does not matter if the name has two words. Please type only the first letter.")
+                CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
         print(room_4beg)
         print("Mob 1 is a orc, Mob 2 is a slime, and Mob 3 is a slime.")
         fighting3()
@@ -458,6 +1066,190 @@ if currentRoom == room_5:
         vigor1 = 800
         vigor2 = 200
         vigor3 = 200
+        def fighting3():
+            global MOBAM
+            global aralth
+            while MOBAM > 0:
+                if MOBAM > 0:
+                    if vigor1 == 0:
+                        imagine.append("mob1")
+                        MOBAM = MOBAM - 1
+                        print("Congratulations!!!! You have defeated mob 1.")
+                        matack3()
+                        MCchoice()
+                    if vigor2 == 0:
+                        imagine.append("mob2")
+                        MOBAM = MOBAM - 1
+                        print("Congratulations!!!! You have defeated mob 2.")
+                        matack3()
+                        MCchoice()
+                    if vigor3 == 0:
+                        imagine.append("mob3")
+                        MOBAM = MOBAM - 1
+                        print("Congratulations!!!! You have defeated mob 3.")
+                        matack3()
+                        MCchoice()
+                    else:
+                        matack3()
+                        MCchoice()
+                elif aralth == 0:
+                        print("You have died to the monsters. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
+
+                else:
+                    print("Congratulations!!!! You have defeated the room!!!! You can now proceed onto the next room.")
+                    aralth = 300
+        def MCchoice():
+            moveinfo()
+            global vigor1
+            global vigor2
+            global vigor3
+            CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
+            if CHOICE == "p":
+                ARAIT = int(40)
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "e":
+                ARAIT = firepower
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "s":
+                ARAIT = weapon_damage
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "a":
+                ARAIT = weapon_damage/2
+                if MOBAM == 2:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    arack1()
+                    arack2()
+                if MOBAM == 3:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                    arack1()
+                    arack2()
+                    arack3()
+                if MOBAM == 4:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                    def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                    arack1()
+                    arack2()
+                    arack3()
+                    arack4()
+            else:
+                print("Something went wrong. Please make sure you are only typing the first letter of the move in lowercase. It does not matter if the name has two words. Please type only the first letter.")
+                CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
         print(room_5beg)
         print("Mob 1 is a big slime, Mob 2 is a slime, and Mob 3 is a slime.")
         fighting3()
@@ -485,6 +1277,187 @@ if currentRoom == room_6:
         vigor1 = 800
         vigor2 = 800
         vigor3 = 200
+        def fighting3():
+            global MOBAM
+            global aralth
+            while MOBAM > 0:
+                if MOBAM > 0:
+                    if vigor1 == 0:
+                        imagine.append("mob1")
+                        MOBAM = MOBAM - 1
+                        print("Congratulations!!!! You have defeated mob 1.")
+                        matack3()
+                        MCchoice()
+                    if vigor2 == 0:
+                        imagine.append("mob2")
+                        MOBAM = MOBAM - 1
+                        print("Congratulations!!!! You have defeated mob 2.")
+                        matack3()
+                        MCchoice()
+                    if vigor3 == 0:
+                        imagine.append("mob3")
+                        MOBAM = MOBAM - 1
+                        print("Congratulations!!!! You have defeated mob 3.")
+                        matack3()
+                        MCchoice()
+                    else:
+                        matack3()
+                        MCchoice()
+                elif aralth == 0:
+                        print("You have died to the monsters. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
+
+                else:
+                    print("Congratulations!!!! You have defeated the room!!!! You can now proceed onto the next room.")
+                    aralth = 300
+        def MCchoice():
+            moveinfo()
+            CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
+            if CHOICE == "p":
+                ARAIT = int(40)
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "e":
+                ARAIT = firepower
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "s":
+                ARAIT = weapon_damage
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "a":
+                ARAIT = weapon_damage/2
+                if MOBAM == 2:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    arack1()
+                    arack2()
+                if MOBAM == 3:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                    arack1()
+                    arack2()
+                    arack3()
+                if MOBAM == 4:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                    def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                    arack1()
+                    arack2()
+                    arack3()
+                    arack4()
+            else:
+                print("Something went wrong. Please make sure you are only typing the first letter of the move in lowercase. It does not matter if the name has two words. Please type only the first letter.")
+                CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
         print(room_6beg)
         print("Mob 1 is a big slime, Mob 2 is a big slime, and Mob 3 is a slime.")
         fighting3()
@@ -511,6 +1484,190 @@ if currentRoom == room_7:
         vigor1 = 800
         vigor2 = 800
         vigor3 = 800
+        def fighting3():
+            global aralth
+            global MOBAM
+            while MOBAM > 0:
+                if MOBAM > 0:
+                    if vigor1 == 0:
+                        imagine.append("mob1")
+                        MOBAM = MOBAM - 1
+                        print("Congratulations!!!! You have defeated mob 1.")
+                        matack3()
+                        MCchoice()
+                    if vigor2 == 0:
+                        imagine.append("mob2")
+                        MOBAM = MOBAM - 1
+                        print("Congratulations!!!! You have defeated mob 2.")
+                        matack3()
+                        MCchoice()
+                    if vigor3 == 0:
+                        imagine.append("mob3")
+                        MOBAM = MOBAM - 1
+                        print("Congratulations!!!! You have defeated mob 3.")
+                        matack3()
+                        MCchoice()
+                    else:
+                        matack3()
+                        MCchoice()
+                elif aralth == 0:
+                        print("You have died to the monsters. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
+
+                else:
+                    print("Congratulations!!!! You have defeated the room!!!! You can now proceed onto the next room.")
+                    aralth = 300
+        def MCchoice():
+            moveinfo()
+            global vigor1
+            global vigor2
+            global vigor3
+            CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
+            if CHOICE == "p":
+                ARAIT = int(40)
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "e":
+                ARAIT = firepower
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "s":
+                ARAIT = weapon_damage
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "a":
+                ARAIT = weapon_damage/2
+                if MOBAM == 2:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    arack1()
+                    arack2()
+                if MOBAM == 3:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                    arack1()
+                    arack2()
+                    arack3()
+                if MOBAM == 4:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                    def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                    arack1()
+                    arack2()
+                    arack3()
+                    arack4()
+            else:
+                print("Something went wrong. Please make sure you are only typing the first letter of the move in lowercase. It does not matter if the name has two words. Please type only the first letter.")
+                CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
         print(room_7beg)
         print("Mob 1 is a big slime, Mob 2 is also big slime, and Mob 3 is another big slime.")
         fighting3()
@@ -532,6 +1689,181 @@ if currentRoom == room_8:
         protection2 = 60
         vigor1 = 300
         vigor2 = 700
+        def fighting2():
+            global MOBAM
+            global aralth
+            if MOBAM > 0:
+                if vigor1 == 0:
+                    imagine.append("mob1")
+                    MOBAM = MOBAM - 1
+                    print("Congratulations!!!! You have defeated mob 1.")
+                    matack2()
+                    MCchoice()
+                elif vigor2 == 0:
+                    imagine.append("mob2")
+                    MOBAM = MOBAM - 1
+                    print("Congratulations!!!! You have defeated mob 2.")
+                    matack2()
+                    MCchoice()
+                else:
+                    matack2()
+                    MCchoice()
+            elif aralth == 0:
+                        print("You have died to the monsters. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
+            else:
+                print("Congratulations!!!! You have defeated the room!!!! You can now proceed onto the next room.")
+                aralth = 300
+        def MCchoice():
+            moveinfo()
+            global vigor1
+            global vigor2
+            CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
+            if CHOICE == "p":
+                ARAIT = int(40)
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "e":
+                ARAIT = firepower
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "s":
+                ARAIT = weapon_damage
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "a":
+                ARAIT = weapon_damage/2
+                if MOBAM == 2:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    arack1()
+                    arack2()
+                if MOBAM == 3:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                    arack1()
+                    arack2()
+                    arack3()
+                if MOBAM == 4:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                    def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                    arack1()
+                    arack2()
+                    arack3()
+                    arack4()
+            else:
+                print("Something went wrong. Please make sure you are only typing the first letter of the move in lowercase. It does not matter if the name has two words. Please type only the first letter.")
+                CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
         print(room_8beg)
         print("Mob 1 is a armored skely, Mob 2 is also a amoured orc.")
         fighting2()
@@ -561,6 +1893,196 @@ if currentRoom == room_9:
         vigor2 = 300
         vigor3 = 700
         vigor4 = 700
+        def fighting4():
+            global MOBAM
+            global aralth
+            if MOBAM > 0:
+                if vigor1 == 0:
+                    imagine.append("mob1")
+                    MOBAM = MOBAM - 1
+                    print("Congratulations!!!! You have defeated mob 1.")
+                    matack4()
+                    MCchoice()
+                elif vigor2 == 0:
+                    imagine.append("mob2")
+                    MOBAM = MOBAM - 1
+                    print("Congratulations!!!! You have defeated mob 2.")
+                    matack4()
+                    MCchoice()
+                elif vigor3 == 0:
+                    imagine.append("mob3")
+                    MOBAM = MOBAM - 1
+                    print("Congratulations!!!! You have defeated mob 3.")
+                    matack4()
+                    MCchoice()
+                elif vigor4 == 0:
+                    imagine.append("mob4")
+                    MOBAM = MOBAM - 1
+                    print("Congratulations!!!! You have defeated mob 4.")
+                    matack4()
+                    MCchoice()
+                else:
+                    matack4()
+                    MCchoice()
+            elif aralth == 0:
+                        print("You have died to the monsters. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
+
+            else:
+                print("Congratulations!!!! You have defeated the room!!!! You can now proceed onto the next room.")
+                aralth = 300
+        def MCchoice():
+            moveinfo()
+            global vigor1
+            global vigor2
+            global vigor3
+            global vigor4
+            CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
+            if CHOICE == "p":
+                ARAIT = int(40)
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "e":
+                ARAIT = firepower
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "s":
+                ARAIT = weapon_damage
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "a":
+                ARAIT = weapon_damage/2
+                if MOBAM == 2:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    arack1()
+                    arack2()
+                if MOBAM == 3:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                    arack1()
+                    arack2()
+                    arack3()
+                if MOBAM == 4:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                    def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                    arack1()
+                    arack2()
+                    arack3()
+                    arack4()
+            else:
+                print("Something went wrong. Please make sure you are only typing the first letter of the move in lowercase. It does not matter if the name has two words. Please type only the first letter.")
+                CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
         print(room_9beg)
         print("Mob 1 is a skeley, Mob 2 is also skeley, and Mob 3 is another orc, plus mob 4 is another orc.")
         fighting4()
@@ -592,6 +2114,196 @@ if currentRoom == room_10:
         vigor2 = 800
         vigor3 = 800
         vigor4 = 800
+        def fighting4():
+            global MOBAM
+            global aralth
+            if MOBAM > 0:
+                if vigor1 == 0:
+                    imagine.append("mob1")
+                    MOBAM = MOBAM - 1
+                    print("Congratulations!!!! You have defeated mob 1.")
+                    matack4()
+                    MCchoice()
+                elif vigor2 == 0:
+                    imagine.append("mob2")
+                    MOBAM = MOBAM - 1
+                    print("Congratulations!!!! You have defeated mob 2.")
+                    matack4()
+                    MCchoice()
+                elif vigor3 == 0:
+                    imagine.append("mob3")
+                    MOBAM = MOBAM - 1
+                    print("Congratulations!!!! You have defeated mob 3.")
+                    matack4()
+                    MCchoice()
+                elif vigor4 == 0:
+                    imagine.append("mob4")
+                    MOBAM = MOBAM - 1
+                    print("Congratulations!!!! You have defeated mob 4.")
+                    matack4()
+                    MCchoice()
+                else:
+                    matack4()
+                    MCchoice()
+            elif aralth == 0:
+                        print("You have died to the monsters. Your parents are very dissapointed in you and even though there is a revive system in this world, your parents are considering whether to use it on you.")
+
+            else:
+                print("Congratulations!!!! You have defeated the room!!!! You can now proceed onto the next room.")
+                aralth = 300
+        def MCchoice():
+            moveinfo()
+            global vigor1
+            global vigor2
+            global vigor3
+            global vigor4
+            CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
+            if CHOICE == "p":
+                ARAIT = int(40)
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "e":
+                ARAIT = firepower
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "s":
+                ARAIT = weapon_damage
+                def Mobchoice():
+                    BOM = input("List the number of the mob you want to fight against.")
+                    if BOM == ('1'):
+                        def arack1():
+                            vigor1 = vigor1 - ARAIT + protection1
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                            print("Mob 1 has", vigor1, "health left")
+                        arack1()
+                    elif BOM == ('2'):
+                        def arack2():
+                            vigor2 = vigor2 - ARAIT + protection2
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                            print("Mob 2 has", vigor2, "health left")
+                        arack2()
+                    elif BOM == ('3'):
+                        def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                        arack3()
+                    elif BOM == ('4'):
+                        def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                        arack4()
+                    else: 
+                        print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
+                Mobchoice()
+            elif CHOICE == "a":
+                ARAIT = weapon_damage/2
+                if MOBAM == 2:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    arack1()
+                    arack2()
+                if MOBAM == 3:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                    arack1()
+                    arack2()
+                    arack3()
+                if MOBAM == 4:
+                    def arack1():
+                        vigor1 = vigor1 - ARAIT + protection1
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB1)
+                        print("Mob 1 has", vigor1, "health left")
+                    def arack2():
+                        vigor2 = vigor2 - ARAIT + protection2
+                        print(ara_ara, "has dealt", ARAIT, "damage to", MOB2)
+                        print("Mob 2 has", vigor2, "health left")
+                    def arack3():
+                            vigor3 = vigor3 - ARAIT + protection3
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB3)
+                            print("Mob 3 has", vigor3, "health left")
+                    def arack4():
+                            vigor4 = vigor4 - ARAIT + protection4
+                            print(ara_ara, "has dealt", ARAIT, "damage to", MOB4)
+                            print("Mob 4 has", vigor4 , "health left")
+                    arack1()
+                    arack2()
+                    arack3()
+                    arack4()
+            else:
+                print("Something went wrong. Please make sure you are only typing the first letter of the move in lowercase. It does not matter if the name has two words. Please type only the first letter.")
+                CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
         print(room_10beg)
         print("Mob 1 is a big slime, Mob 2 is also big slime, and Mob 3 is another big slime, and you guessed it, mob 4 is a big slime too.")
         fighting4()

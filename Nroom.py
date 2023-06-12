@@ -14,37 +14,14 @@ rooms = {
 
 
 def everything_rooms_1():
-    def move_rooms_1(direction, room='room_1'):
-        if direction == 'south':
-            room = 'room_1'
-            return rooms[room]['south']
-        elif direction == 'north':
-            if room == 'room_1':
-                return 'Invalid direction please try again.'
-            return rooms[room]['north']
-        elif direction == 'east':
-            room == 'room_3'
-            return rooms[room]['east']
-        elif direction == 'west':
-            if room == 'room_1':
-                return 'Invalid direction please try again.'
-            return rooms[room]['west']
-        
-    currentRoom = 'room_1'
-        
-
-    userDirection = ''
-    while userDirection != 'exit':
-        userDirection = input("Pick a direction.")
-        if currentRoom == 'room_1':
-            if userDirection == 'south':
-                currentRoom = move_rooms_1(userDirection, currentRoom)
-                print(currentRoom)
-            if userDirection == 'east':
-                currentRoom = move_rooms_1(userDirection, currentRoom)
-                print(currentRoom)
-        else:
-            print('That is not a direction, pick another direction.')
+    userDirection = input("Pick a direction")
+    global currentRoom
+    if userDirection == 'south':
+        currentRoom = 2
+    if userDirection == 'east':
+        currentRoom = 3
+    else:
+        print('That is not a direction, pick another direction.')
 
 
 def everything_rooms_2():
