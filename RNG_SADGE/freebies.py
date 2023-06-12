@@ -1,5 +1,5 @@
 import random
-from main_file import *
+
 from ChARActer.chARActer import *
 Item = []
 

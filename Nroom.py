@@ -35,13 +35,14 @@ def everything_rooms_1():
 
     userDirection = ''
     while userDirection != 'exit':
-        userDirection = input("Pick a direction, or MUST type exit to exit the game.")
+        userDirection = input("Pick a direction.")
         if currentRoom == 'room_1':
             if userDirection == 'south':
                 currentRoom = move_rooms_1(userDirection, currentRoom)
                 print(currentRoom)
-            elif userDirection == 'east':
+            if userDirection == 'east':
                 currentRoom = move_rooms_1(userDirection, currentRoom)
+                print(currentRoom)
         else:
             print('That is not a direction, pick another direction.')
 
