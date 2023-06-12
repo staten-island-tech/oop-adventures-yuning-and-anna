@@ -16,7 +16,7 @@ from RNG_SADGE.rng import *
 firepower = 0
 ARAIT = 0
 weapon_damage = 0
-def starting():
+def starting(): 
     beginning = input("Type start when are ready to begin ")
     if beginning == "start":
         print(intro_room_beginning)
@@ -28,7 +28,7 @@ def MCchoice():
     moveinfo()
     CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
     if CHOICE == "p":
-        ARAIT = (40)
+        ARAIT = "40"
         Mobchoice()
     elif CHOICE == "e":
         ARAIT = firepower
