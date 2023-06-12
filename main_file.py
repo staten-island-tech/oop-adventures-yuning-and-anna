@@ -28,7 +28,7 @@ def MCchoice():
     moveinfo()
     CHOICE = input("What move do you want to use? Only type the first letter (lowercase) of the move that you want")
     if CHOICE == "p":
-        ARAIT = 40
+        ARAIT = (40)
         Mobchoice()
     elif CHOICE == "e":
         ARAIT = firepower
