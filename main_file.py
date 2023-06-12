@@ -116,13 +116,13 @@ def arack4():
 
 def Mobchoice():
     BOM = input("List the number of the mob you want to fight against.")
-    if BOM == 1:
+    if BOM == ('1'):
         arack1()
-    elif BOM == 2:
+    elif BOM == ('2'):
         arack2()
-    elif BOM == 3:
+    elif BOM == ('3'):
         arack3()
-    elif BOM == 4:
+    elif BOM == ('4'):
         arack4()
     else: 
         print("Make sure that you are typing in the correct number of the corresponding mob that you want to attack.")
